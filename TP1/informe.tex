@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs} % Cursive font
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{nameref}
+\usepackage{wrapfig}
+
+
+% \usepackage[left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+
+
+\usepackage{mathtools}
+\usepackage{xparse} \DeclarePairedDelimiterX{\Iintv}[1]{\llbracket}{\rrbracket}{\iintvargs{#1}}
+\NewDocumentCommand{\iintvargs}{>{\SplitArgument{1}{,}}m}
+{\iintvargsaux#1}
+\NewDocumentCommand{\iintvargsaux}{mm} {#1\mkern1.5mu,\mkern1.5mu#2}
+
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+% \usepackage[a4paper,hmargin=1in, vmargin=1.4in,footskip=0.25in]{geometry}
+
+\graphicspath{ {./images/} }
+
+
+%\addtolength{\hoffset}{-1cm}
+%\addtolength{\hoffset}{-2.5cm}
+%\addtolength{\voffset}{-2.5cm}
+\addtolength{\textwidth}{0.2cm}
+%\addtolength{\textheight}{2cm}
+\setlength{\parskip}{8pt}
+\setlength{\parindent}{0.5cm}
+\linespread{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{TP1 - Bisiach, Cipullo, Sullivan}
+\lhead{Introducción a la Inteligencia Artificial}
+\rfoot{\vspace{1cm} \thepage}
+
+\renewcommand*\contentsname{\LARGE Índice}
+
+\begin{document}
+
+\begin{titlepage}
+    \hspace{-1.2cm}\includegraphics[scale= 0.48]{header.png}
+    \begin{center}
+        \vfill
+            \noindent\textbf{\Huge Introducción a la Inteligencia Artificial}\par
+            \vspace{.5cm}
+            \noindent\textbf{\Huge Trabajo Práctico 1: Algunas aplicaciones interesantes de la IA}\par
+            \vspace{.5cm}
+        \vfill
+        \noindent \textbf{\huge Alumnos:}\par
+        \vspace{.5cm}
+        \noindent \textbf{\Large Bisiach, Ezequiel}\par
+        \noindent \textbf{\Large Cipullo, Inés}\par
+        \noindent \textbf{\Large Sullivan, Katherine}\par
+ 
+        \vfill
+        % \large Universidad Nacional de Rosario \par
+        \noindent\large 2022
+    \end{center}
+\end{titlepage}
+\ \par
+
+
+\section{Introducción}
+El presente informe se enfocará en la aplicación de la inteligencia artificial en la terapia cognitava conductual (CBT por sus siglas en inglés \textit{Cognitive Behavioral Therapy}), en particular en la herramienta Woebot. Woebot es un chatbot que intenta simular un ``terapeuta artificial''. El uso de la inteligencia artificial en la psicología abre distintas puertas de debate, las cuales se procederán a desarrollar.
+
+%%% \subsection: pq CBT y no psicoanalisis u otras terapias, en esta subsection hablaría tambien del punto 2)
+
+\section{Sobre las problemáticas que busca resolver Woebot}
+Por un lado, Woebot garantiza la posibilidad de acceso a la terapia a un rango más extenso de personas, entre ellas, personas sin los suficientes recursos económicos o personas con patologías afines a la ansiedad social. 
+
+Por el otro, cuenta con la ventaja de ser un servicio disponible las 24 horas, lo que resulta especialmente benefisioso para aquellas personas que requieran de acompañamiento terapéutico sin restricciones horarias. 
+
+\section{Sobre las técnicas utilizadas por Woebot}
+Resulta de especial interés para la materia ver qué técnicas de IA usa esta aplicación. Haciendo uso del procesamiento del lenguaje natural (NLP de sus siglas en inglés \textit{Natural Language Processing}), la aplicación logra simular el manejo del lenguaje como una persona. Esto le permite analizar los mensajes recibidos capturando palablas clave que determinarán la semántica y posteriormente aplicar los correspondientes algoritmos para asi generar una respuesta.
+
+% Para realizar el procesamiento del lenguaje natural se hacen uso de redes neuronales
+
+\section{Sobre los estudios realizados}
+El grupo que desarrolla Woebot es Woebot Health. Es un grupo interdisciplinario que conjuga especialistas en psicoterapia y especialistas en inteligencia artificial fundado y dirigido por Alison Darcy, doctora de la Universidad de Standford.
+
+Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad y en depresión post-parto.
+
+%%% Esta sección podria ser la parte de apreciaciones personales, pero habria que agregarle alguna cosa positiva que contrareste toda la critica xd, sino se puede acomodar el algun otro lado
+\section{Sobre las cuestiones a resolver al aplicar una IA en psicología}
+Resulta claro el planteo de que un programa no logra emular una persona, al menos actualmente, pero si se busca que pueda semejarse a ellas en ciertos aspectos, más cuando interactúan directamente con humanos en un ámbito sensible como es la psicología. Dicho esto, resulta importante la necesidad de que estos terapeutas artificiales puedan realizar tareas como proveer soluciones en momento críticos, acompañar emocionalmente y hasta saber cual es el límite de sus "capacidades" y poder derivar a las personas a otras fuentes de ayuda.
+
+Por otro lado, surgen algunas cuestiones legales que se tienen que regular. Se debería establecer una cadena de responsabilidades sobre personas para casos de mala praxis y demás responsabilidades civiles en el ejercicio de la psicología, que no necesariamente van a recaer sobre el grupo de desarrolladores que armaron el software de la aplicación. Además, como el programa va a almacenar toda la información que intercambie con las distintas personas, en parte como registro pero también para continuar con su "formación", habría que determinar como se maneja el secreto profesional y quienes tienen acceso a ello. Muchos argumentarán que no es ético que se reocpilen todos esos datos personales.
+
+%%% faltaria hablar de los sesgos, punto 6)
+
+\section{Conclusión}
+
+\section{Bibliogarfía}
+
+
+\end{document}

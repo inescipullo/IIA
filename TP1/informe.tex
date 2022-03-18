@@ -51,7 +51,7 @@
 \begin{document}
 
 \begin{titlepage}
-    \hspace{-1.2cm}\includegraphics[scale= 0.48]{header.png}
+    \hspace{-2.5cm}\includegraphics[scale= 0.48]{header.png}
     \begin{center}
         \vfill
             \noindent\textbf{\Huge Introducción a la Inteligencia Artificial}\par
@@ -74,34 +74,131 @@
 
 
 \section{Introducción}
-El presente informe se enfocará en la aplicación de la inteligencia artificial en la terapia cognitava conductual (CBT por sus siglas en inglés \textit{Cognitive Behavioral Therapy}), en particular en la herramienta Woebot. Woebot es un chatbot que intenta simular un ``terapeuta artificial''. El uso de la inteligencia artificial en la psicología abre distintas puertas de debate, las cuales se procederán a desarrollar.
+Tal vez es por su tratamiento en la ficción, tal vez es 
+por la manera de pensar del público en general pero no
+cabe ninguna duda de que una de las preguntas que 
+automáticamente se asocia con la inteligencia artificial
+es: ``¿pueden las máquinas reemplazar a los humanos?". 
+
+Si 
+bien esta pregunta abre un debate más amplio que no es lo 
+que será discutido en el presente informe, sí es digna la
+mención la misma puesto que a continuación se tratará
+Woebot, una inteligencia artificial que se podría decir
+que busca reemplazar
+a personas, pero a un tipo específico de personas, 
+terapeutas conginitivo conductuales. 
+
+% El presente informe se enfocará en la aplicación de la inteligencia artificial en la terapia cognitava conductual (CBT por sus siglas en inglés \textit{Cognitive Behavioral Therapy}), en particular en la herramienta Woebot. Woebot es un chatbot que intenta simular un ``terapeuta artificial''. El uso de la inteligencia artificial en la psicología abre distintas puertas de debate, las cuales se procederán a desarrollar.
 
 %%% \subsection: pq CBT y no psicoanalisis u otras terapias, en esta subsection hablaría tambien del punto 2)
 
-\section{Sobre las problemáticas que busca resolver Woebot}
-Por un lado, Woebot garantiza la posibilidad de acceso a la terapia a un rango más extenso de personas, entre ellas, personas sin los suficientes recursos económicos o personas con patologías afines a la ansiedad social. 
+\section{Sobre el propósito de Woebot}
+Woebot es un chatbot que busca garantizar el acceso a la terapia 
+cognitivo conductual (CBT por sus siglas en inglés) a 
+un rango más extenso de personas (entre ellas, personas 
+sin los suficientes recursos económicos[1] o personas con 
+patologías afines a la ansiedad social) y en un rango 
+de horario irrestricto (lo que resulta especialmente 
+beneficioso para el control de episodios patólogicos 
+que se pueden dar en cualquier momento). 
 
-Por el otro, cuenta con la ventaja de ser un servicio disponible las 24 horas, lo que resulta especialmente benefisioso para aquellas personas que requieran de acompañamiento terapéutico sin restricciones horarias. 
+% Por el otro, cuenta con la ventaja de ser un servicio disponible las 24 horas, lo que resulta especialmente benefisioso para aquellas personas que requieran de acompañamiento terapéutico sin restricciones horarias. 
 
 \section{Sobre las técnicas utilizadas por Woebot}
-Resulta de especial interés para la materia ver qué técnicas de IA usa esta aplicación. Haciendo uso del procesamiento del lenguaje natural (NLP de sus siglas en inglés \textit{Natural Language Processing}), la aplicación logra simular el manejo del lenguaje como una persona. Esto le permite analizar los mensajes recibidos capturando palablas clave que determinarán la semántica y posteriormente aplicar los correspondientes algoritmos para asi generar una respuesta.
+%Resulta de especial interés para la materia ver qué técnicas de IA usa esta aplicación. 
+Haciendo uso del procesamiento del lenguaje natural (NLP de sus siglas en inglés 
+\textit{Natural Language Processing}), la aplicación 
+logra simular el manejo del lenguaje como una persona. 
+Es decir que puede analizar los mensajes recibidos 
+capturando 
+palablas clave 
+que determinarán su semántica
+y posteriormente aplicar los
+algoritmos correspondientes para generar una respuesta.
 
 % Para realizar el procesamiento del lenguaje natural se hacen uso de redes neuronales
 
 \section{Sobre los estudios realizados}
-El grupo que desarrolla Woebot es Woebot Health. Es un grupo interdisciplinario que conjuga especialistas en psicoterapia y especialistas en inteligencia artificial fundado y dirigido por Alison Darcy, doctora de la Universidad de Standford.
+El grupo que desarrolla Woebot es Woebot Health, un grupo interdisciplinario que conjuga especialistas en psicoterapia y especialistas en inteligencia artificial fundado y dirigido por Alison Darcy, doctora de la Universidad de Standford.
 
-Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad y en depresión post-parto.
+Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad y en cuadros de depresión post-parto.
+Referencias a los mismos y resúmenes sobre sus resultados 
+se pueden encontrar en el Woebot Health Research Book[2]. 
+
+\section{Sobre las implicancias de Woebot}
+
+La psicología requiere un tratamiento más que sensible
+con el paciente en general pero también con sus datos.
+El secreto profesional es algo que se da por sentado en
+una sesión terapéutica con un profesional pero dónde cae
+el secreto en un programa que necesita guardar explícitamente
+los datos del paciente y todo lo que este le comunica
+para poder aprender de ellos. No necesariamente se desconfía
+de la divulgación de los mismo por parte de la aplicación
+pero que información tan sensible esté guardada y propensa a
+un hackeo es algo que no se puede dejar de lado.
+
+Pero esa no es la única implicancia que surge relacionada
+con el tratamiento de los datos y Woebot. Históricamente 
+existieron sesgos en los diagnósticos psicológicos por 
+trabajar con datos que no consideraban la diversidad de
+grupos, uno de los casos más clásicos siendo la 
+investigación sobre los trastornos del espectro autista
+(TEA)
+cuyo foco puesto solo en hombres a día de hoy sigue 
+generando que el determinar el diagnóstico de una 
+mujer con TEA sea muchísimo más difícil que uno
+correspondiente a un varón. Hace pocos años que 
+se le está prestando atención a estos hechos y 
+que aparezcan máquinas
+en la ecuación solo puede generar más problemas a la 
+hora de tener en cuenta estos sesgos. 
+
+Sin embargo, no todas las implicancias fuera de su propósito
+hacen de Woebot algo indeseable, si no, ¿por qué estaríamos 
+hablando de él? Puede ser que sea un deseo muy futurístico,
+pero se cree que tal vez algún día tanto desarrollo de 
+inteligencias que busquen ser infalibles ayuden a que los
+humanos seamos mejores, y en este caso en particular que 
+tanto modelizado de terapia nos pueda ayudar a crear 
+mejores técnicas y mejores profesionales.
+
 
 %%% Esta sección podria ser la parte de apreciaciones personales, pero habria que agregarle alguna cosa positiva que contrareste toda la critica xd, sino se puede acomodar el algun otro lado
-\section{Sobre las cuestiones a resolver al aplicar una IA en psicología}
-Resulta claro el planteo de que un programa no logra emular una persona, al menos actualmente, pero si se busca que pueda semejarse a ellas en ciertos aspectos, más cuando interactúan directamente con humanos en un ámbito sensible como es la psicología. Dicho esto, resulta importante la necesidad de que estos terapeutas artificiales puedan realizar tareas como proveer soluciones en momento críticos, acompañar emocionalmente y hasta saber cual es el límite de sus "capacidades" y poder derivar a las personas a otras fuentes de ayuda.
+\section{Conclusiones y un pequeño análisis sobre las cuestiones a resolver si queremos un futuro con IAs}
+Uniendo un poco lo desarrollado en la introducción y
+lo planteado en esta última sección podemos ver que la 
+idea por la que se está trabajando en el campo de la 
+inteligencia artificial puede parecer que es 
+reemplazar a los humanos pero la realidad es que se busca
+que las intelgencias artificiales reemplacen a humanos en 
+ciertas tareas y que nosotros podamos progresar en base a 
+ellas, focalizándonos en áreas en donde se seguirá 
+necesitando de inteligencia humana y, principalmente, 
+aprendiendo de lo que pudimos enseñar.
 
-Por otro lado, surgen algunas cuestiones legales que se tienen que regular. Se debería establecer una cadena de responsabilidades sobre personas para casos de mala praxis y demás responsabilidades civiles en el ejercicio de la psicología, que no necesariamente van a recaer sobre el grupo de desarrolladores que armaron el software de la aplicación. Además, como el programa va a almacenar toda la información que intercambie con las distintas personas, en parte como registro pero también para continuar con su "formación", habría que determinar como se maneja el secreto profesional y quienes tienen acceso a ello. Muchos argumentarán que no es ético que se reocpilen todos esos datos personales.
+Ahora bien, no hay que perder de vista que se necesita 
+de un esfuerzo aunado para establecer
+tanto marcos morales como legales que permitan el desarrollo 
+métodico y ordenado
+de las inteligencias que queremos. El desarrollo de 
+comisiones internacionales que regulen las 
+prácticas de inteligencia artificial son un buen presagio 
+pero verdaderamente necesitamos un diseño estructural 
+de la sociedad que desarrollará y usará inteligencias 
+artificiales en su día a día. El más tarde no es
+para lamentarse si tenemos el ahora.
+
+
+%Volviendo a lo planteado en la introducción, 
+%si bien resulta claro que un programa no logra emular una persona, 
+%al menos actualmente, sí se busca que pueda semejarse a ellas en ciertos aspectos, más cuando interactúan directamente con humanos en un ámbito sensible como es la psicología.
+% Dicho esto, resulta importante la necesidad de que estos terapeutas artificiales puedan realizar tareas como proveer soluciones en momento críticos, acompañar emocionalmente y hasta saber cual es el límite de sus "capacidades" y poder derivar a las personas a otras fuentes de ayuda.
+
+%Por otro lado, surgen algunas cuestiones legales que se tienen que regular. Se debería establecer una cadena de responsabilidades sobre personas para casos de mala praxis y demás responsabilidades civiles en el ejercicio de la psicología, que no necesariamente van a recaer sobre el grupo de desarrolladores que armaron el software de la aplicación. Además, como el programa va a almacenar toda la información que intercambie con las distintas personas, en parte como registro pero también para continuar con su "formación", habría que determinar como se maneja el secreto profesional y quienes tienen acceso a ello. Muchos argumentarán que no es ético que se reocpilen todos esos datos personales.
 
 %%% faltaria hablar de los sesgos, punto 6)
-
-\section{Conclusión}
 
 \section{Bibliogarfía}
 

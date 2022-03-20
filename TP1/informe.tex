@@ -11,6 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{nameref}
 \usepackage{wrapfig}
+\usepackage{hyperref}
 
 
 % \usepackage[left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
@@ -48,6 +49,8 @@
 
 \renewcommand*\contentsname{\LARGE Índice}
 
+\setlength{\skip\footins}{0.5cm}
+
 \begin{document}
 
 \begin{titlepage}
@@ -81,12 +84,15 @@ automáticamente se asocia con la inteligencia artificial
 es: ``¿pueden las máquinas reemplazar a los humanos?". 
 
 Si 
-bien esta pregunta abre un debate más amplio que no es lo 
-que será discutido en el presente informe, sí es digna la
-mención la misma puesto que a continuación se tratará
-Woebot, una inteligencia artificial que se podría decir
+bien esta pregunta abre un debate más amplio que no es el foco
+de lo 
+que será discutido en el presente informe, sí la revisitaremos y es digna 
+su
+mención puesto que a continuación se expondrá sobre
+Woebot, una inteligencia artificial que,
+en un principio, se podría decir
 que busca reemplazar
-a personas, pero a un tipo específico de personas, 
+a personas, pero a un tipo específico de personas: 
 terapeutas conginitivo conductuales. 
 
 % El presente informe se enfocará en la aplicación de la inteligencia artificial en la terapia cognitava conductual (CBT por sus siglas en inglés \textit{Cognitive Behavioral Therapy}), en particular en la herramienta Woebot. Woebot es un chatbot que intenta simular un ``terapeuta artificial''. El uso de la inteligencia artificial en la psicología abre distintas puertas de debate, las cuales se procederán a desarrollar.
@@ -97,7 +103,14 @@ terapeutas conginitivo conductuales.
 Woebot es un chatbot que busca garantizar el acceso a la terapia 
 cognitivo conductual (CBT por sus siglas en inglés) a 
 un rango más extenso de personas (entre ellas, personas 
-sin los suficientes recursos económicos[1] o personas con 
+sin los suficientes recursos económicos\footnotemark[1]\footnote[1]{Hoy la aplicación de Woebot es gratuita 
+al recibir finanaciamiento a través de un fondo de 
+capital emprendedor. Pero según establecido por su 
+fundadora se apunta a que algún día la aplicación 
+pueda ser recetada y por lo tanto pagada como un 
+tratamiento, no sin perder de vista su objetivo de 
+hacerla accesible a todos aquellos que necesiten la 
+herramienta.} o personas con 
 patologías afines a la ansiedad social) y en un rango 
 de horario irrestricto (lo que resulta especialmente 
 beneficioso para el control de episodios patólogicos 
@@ -122,22 +135,24 @@ algoritmos correspondientes para generar una respuesta.
 \section{Sobre los estudios realizados}
 El grupo que desarrolla Woebot es Woebot Health, un grupo interdisciplinario que conjuga especialistas en psicoterapia y especialistas en inteligencia artificial fundado y dirigido por Alison Darcy, doctora de la Universidad de Standford.
 
-Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad y en cuadros de depresión post-parto.
+Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad, en casos de abuso de sustancias y en cuadros de depresión post-parto.
 Referencias a los mismos y resúmenes sobre sus resultados 
-se pueden encontrar en el Woebot Health Research Book[2]. 
+junto con otros artículos que podrían resultar de interés
+se pueden encontrar en el \href{https://woebothealth.com/img/2021/05/Woebot-Health-Research-Bibliography_May-2021-1-1.pdf}{Woebot Health Research Book}.
 
 \section{Sobre las implicancias de Woebot}
 
 La psicología requiere un tratamiento más que sensible
 con el paciente en general pero también con sus datos.
 El secreto profesional es algo que se da por sentado en
-una sesión terapéutica con un profesional pero dónde cae
+una sesión terapéutica con un profesional pero, ¿dónde cae
 el secreto en un programa que necesita guardar explícitamente
 los datos del paciente y todo lo que este le comunica
-para poder aprender de ellos. No necesariamente se desconfía
+para poder aprender de ellos? No necesariamente se desconfía
 de la divulgación de los mismo por parte de la aplicación
 pero que información tan sensible esté guardada y propensa a
-un hackeo es algo que no se puede dejar de lado.
+un hackeo es algo que no se puede dejar de lado al momento
+de analizar este tipo de aplicaciones.
 
 Pero esa no es la única implicancia que surge relacionada
 con el tratamiento de los datos y Woebot. Históricamente 
@@ -199,8 +214,41 @@ para lamentarse si tenemos el ahora.
 %Por otro lado, surgen algunas cuestiones legales que se tienen que regular. Se debería establecer una cadena de responsabilidades sobre personas para casos de mala praxis y demás responsabilidades civiles en el ejercicio de la psicología, que no necesariamente van a recaer sobre el grupo de desarrolladores que armaron el software de la aplicación. Además, como el programa va a almacenar toda la información que intercambie con las distintas personas, en parte como registro pero también para continuar con su "formación", habría que determinar como se maneja el secreto profesional y quienes tienen acceso a ello. Muchos argumentarán que no es ético que se reocpilen todos esos datos personales.
 
 %%% faltaria hablar de los sesgos, punto 6)
+\newpage
 
 \section{Bibliogarfía}
 
+\begin{enumerate}
 
+\item Darcy A., Daniels J., Salinger D., Wicks P., Robinson A.:
+\textit{Evidence of Human-Level Bonds Established With a Digital Conversational Agent: Cross-sectional, Retrospective Observational Study},
+URL: \url{https://formative.jmir.org/2021/5/e27868},
+DOI: 10.2196/27868
+
+\item Ho A., Hancock J., Miner A.:
+\textit{Psychological, Relational, and Emotional Effects of
+Self-Disclosure After Conversations With a Chatbot},
+URL: \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6074615/}
+
+DOI: 10.1093/joc/jqy026
+
+\item Martínez-Miranda J.: 
+\textit{Embodied Conversational Agents for the Detection and 
+Prevention of Suicidal Behaviour: 
+Current Applications and Open Challenges},
+URL: \url{https://europepmc.org/article/med/28755270}
+DOI: 10.1007/s10916-017-0784-6
+
+\item Miner A., Chow A., Adler S., Zaitsev I., Tero P., Darcy A., and Paepcke A.:
+\textit{Conversational Agents and Mental Health: Theory-Informed Assessment of Language and
+Affect. In Proceedings of the Fourth International Conference on Human Agent Interaction (HAI
+'16)},
+URL: \url{https://doi.org/10.1145/2974804.2974820}
+DOI: 10.1145/2974804
+
+\item Prochaska J., Vogel E., Chieng A., Kendra M., Baiocchi M., Pajarito S., Robinson A.:
+A Therapeutic Relational Agent for Reducing Problematic Substance Use (Woebot): Development and Usability Study, 
+URL: \url{https://www.jmir.org/2021/3/e24850},
+DOI: 10.2196/24850
+\end{enumerate}
 \end{document}

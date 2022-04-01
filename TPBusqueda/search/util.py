@@ -14,7 +14,7 @@ import heapq, random
 """
  Data structures useful for implementing SearchAgents
 """
-
+ 
 class Stack:
     "A container with a last-in-first-out (LIFO) queuing policy."
     def __init__(self):
@@ -318,7 +318,7 @@ class Counter(dict):
         return addend
 
 def raiseNotDefined():
-    print "Method not implemented: %s" % inspect.stack()[1][3]
+    print("Method not implemented: %s" % inspect.stack()[1][3])
     sys.exit(1)
 
 def normalize(vectorOrCounter):
@@ -455,14 +455,14 @@ def lookup(name, namespace):
         options = [getattr(module, name) for module in modules if name in dir(module)]
         options += [obj[1] for obj in namespace.items() if obj[0] == name ]
         if len(options) == 1: return options[0]
-        if len(options) > 1: raise Exception, 'Name conflict for %s'
-        raise Exception, '%s not found as a method or class' % name
+        if len(options) > 1: raise Exception('Name conflict for %s')
+        raise Exception('%s not found as a method or class' % name)
 
 def pause():
     """
     Pauses the output stream awaiting user feedback.
     """
-    print "<Press enter/return to continue>"
+    print("<Press enter/return to continue>")
     raw_input()
 
 

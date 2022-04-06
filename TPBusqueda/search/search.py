@@ -100,21 +100,18 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    stack = util.Stack()
-    search(problem, stack)
+    search(problem, util.Stack())
 
 
 def breadthFirstSearch(problem):
     """
     Search the shallowest nodes in the search tree first.
     """
-    queue = util.Queue()
-    search(problem, queue)
+    search(problem, util.Queue())
 
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
-    priority_queue = util.PriorityQueueWithFunction(problem.costFn)
-    search(problem, priority_queue)
+    search(problem, util.PriorityQueueWithFunction(problem.costFn))
 
 
 def nullHeuristic(state, problem=None):
@@ -126,8 +123,7 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
-    priority_queue = util.PriorityQueueWithFunction(problem.costFn + heuristic)
-    search(problem, priority_queue)
+    search(problem, util.PriorityQueueWithFunction(problem.costFn + heuristic))
 
 # Abbreviations
 bfs = breadthFirstSearch

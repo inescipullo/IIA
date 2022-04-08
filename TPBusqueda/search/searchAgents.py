@@ -28,13 +28,13 @@ project description for details.
 
 Good luck and happy searching!
 """
-from game import Directions
-from game import Agent
-from game import Actions
-import util
 import time
 import search
 import searchAgents
+import util
+from game import Actions, Agent, Directions
+import math
+
 
 class GoWestAgent(Agent):
     "An agent that goes West until it can't."
@@ -225,7 +225,7 @@ class StayEastSearchAgent(SearchAgent):
     """
     def __init__(self):
         self.searchFunction = search.uniformCostSearch
-        costFn = lambda pos: .5 ** pos[0]
+        costFn = lambda pos: math.pow(1/2,pos[0])
         self.searchType = lambda state: PositionSearchProblem(state, costFn)
 
 class StayWestSearchAgent(SearchAgent):
@@ -242,7 +242,7 @@ class StayWestSearchAgent(SearchAgent):
 
 def manhattanHeuristic(position, problem, info={}):
     "The Manhattan distance heuristic for a PositionSearchProblem"
-    xy1 = position
+    xy1 = position[0] # agregue la indexación en 0 porque position teoricamente es una tupla entre la posición y las acciones realizadas
     xy2 = problem.goal
     return abs(xy1[0] - xy2[0]) + abs(xy1[1] - xy2[1])
 

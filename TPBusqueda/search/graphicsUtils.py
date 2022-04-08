@@ -281,7 +281,10 @@ def _clear_keys(event=None):
     _keyswaiting = {}
     _got_release = None
 
-def keys_pressed(d_o_e=tkinter.Tk().tk.dooneevent,
+def p(x):
+    pass
+
+def keys_pressed(d_o_e=_root_window.dooneevent if _root_window is not None else p,
                  d_w=tkinter._tkinter.DONT_WAIT):
     d_o_e(d_w)
     if _got_release:
@@ -304,7 +307,7 @@ def wait_for_keys():
     return keys
 
 def remove_from_screen(x,
-                       d_o_e=tkinter.Tk().tk.dooneevent,
+                       d_o_e=_root_window.dooneevent if _root_window is not None else p,
                        d_w=tkinter._tkinter.DONT_WAIT):
     _canvas.delete(x)
     d_o_e(d_w)
@@ -316,7 +319,7 @@ def _adjust_coords(coord_list, x, y):
     return coord_list
 
 def move_to(object, x, y=None,
-            d_o_e=tkinter.Tk().tk.dooneevent,
+            d_o_e=_root_window.dooneevent if _root_window is not None else p,
             d_w=tkinter._tkinter.DONT_WAIT):
     if y is None:
         try: x, y = x
@@ -338,7 +341,7 @@ def move_to(object, x, y=None,
     d_o_e(d_w)
 
 def move_by(object, x, y=None,
-            d_o_e=tkinter.Tk().tk.dooneevent,
+            d_o_e=_root_window.dooneevent if _root_window is not None else p,
             d_w=tkinter._tkinter.DONT_WAIT):
     if y is None:
         try: x, y = x

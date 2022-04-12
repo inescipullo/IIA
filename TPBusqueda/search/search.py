@@ -69,6 +69,7 @@ def tinyMazeSearch(problem):
 
 def search(problem, fringe):
     initial_state = problem.getStartState()
+    print(initial_state)
     initial_actions = []
     initial_candidate = (initial_state, initial_actions)
     fringe.push(initial_candidate)
@@ -111,7 +112,8 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
-    return search(problem, util.PriorityQueueWithFunction(problem.costFn))
+    # return search(problem, util.PriorityQueueWithFunction(problem.costFn))
+    return search(problem, util.PriorityQueueWithFunction(lambda x: 1))
 
 
 def nullHeuristic(state, problem=None):
@@ -123,7 +125,8 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
-    return search(problem, util.PriorityQueueWithFunction(lambda x: problem.costFn(x) + heuristic(x, problem)))
+    # return search(problem, util.PriorityQueueWithFunction(lambda x: problem.costFn(x) + heuristic(x, problem)))
+    return search(problem, util.PriorityQueueWithFunction(lambda x: heuristic(x[0], problem))) # hago x[0], pq de acuerdo al algoritmo search x = (state, actions) y en este caso las actions no me sirven y la funcion toma unicamnete el state
 
 # Abbreviations
 bfs = breadthFirstSearch

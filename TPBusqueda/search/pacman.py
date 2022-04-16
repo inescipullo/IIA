@@ -223,11 +223,14 @@ class GameState:
         state.data = self.data.deepCopy()
         return state
 
-    # def __eq__( self, other ):
-    #     """
-    #     Allows two states to be compared.
-    #     """
-    #     return self.data == other.data
+    def __eq__( self, other ):
+        """
+        Allows two states to be compared.
+        """
+        if (other == None):
+                return False
+        else:
+            return self.data == other.data
 
     def __hash__( self ):
         """

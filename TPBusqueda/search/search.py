@@ -113,7 +113,23 @@ def breadthFirstSearch(problem):
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
     # return search(problem, util.PriorityQueueWithFunction(problem.costFn))
-    return search(problem, util.PriorityQueueWithFunction(lambda x: 1))
+    # return search(problem, util.PriorityQueueWithFunction(lambda x: 1))
+
+    nodes = util.PriorityQueue()
+    start = problem.getStartState()
+    nodes.push((start,[],0),0)
+    visited = set()
+
+    while not nodes.isEmpty():
+        state,direc,costo = nodes.pop()
+        if state not in visited:
+            visited.add(state)
+            if problem.isGoalState(state):
+                return direc
+            else:
+                for i in problem.getSuccessors(state):
+                    if i[0] not in visited:
+                        nodes.push((i[0], direc + i[1], costo + i[2]), costo + i[2])
 
 
 def nullHeuristic(state, problem=None):
@@ -126,7 +142,24 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
     # return search(problem, util.PriorityQueueWithFunction(lambda x: problem.costFn(x) + heuristic(x, problem)))
-    return search(problem, util.PriorityQueueWithFunction(lambda x: heuristic(x[0], problem))) # hago x[0], pq de acuerdo al algoritmo search x = (state, actions) y en este caso las actions no me sirven y la funcion toma unicamnete el state
+    # return search(problem, util.PriorityQueueWithFunction(lambda x: heuristic(x[0], problem))) # hago x[0], pq de acuerdo al algoritmo search x = (state, actions) y en este caso las actions no me sirven y la funcion toma unicamnete el state
+    
+    nodes = util.PriorityQueue()
+    start = problem.getStartState()
+    nodes.push((start,[],0),heuristic(start,problem))
+    visited = set()
+
+    while not nodes.isEmpty():
+        state,direc,costo = nodes.pop()
+        if state not in visited:
+            visited.add(state)
+            if problem.isGoalState(state):
+                return direc
+            else:
+                for i in problem.getSuccessors(state):
+                    if i[0] not in visited:
+                        nodes.push((i[0], direc + i[1], costo + i[2]), costo + i[2] + heuristic(i[0],problem))
+
 
 # Abbreviations
 bfs = breadthFirstSearch

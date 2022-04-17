@@ -242,7 +242,7 @@ class StayWestSearchAgent(SearchAgent):
 
 def manhattanHeuristic(position, problem, info={}):
     "The Manhattan distance heuristic for a PositionSearchProblem"
-    xy1 = position[0] # agregue la indexación en 0 porque position teoricamente es una tupla entre la posición y las acciones realizadas
+    xy1 = position
     xy2 = problem.goal
     return abs(xy1[0] - xy2[0]) + abs(xy1[1] - xy2[1])
 
@@ -365,6 +365,14 @@ def cornersHeuristic(state, problem):
     walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
 
     "*** YOUR CODE HERE ***"
+    ''' 
+    Por cada esquina no visitada calcularemos la distancia de Manhattan desde donde estamos 
+    a ella y le sumaremos a eso el valor de la heurística desde esa esquina. Una vez
+    calculados esos valores, la heurística queda determinada por el mínimo de ellos.
+
+    Esta heurística es consistente (y por lo tanto también admisible). 
+    Esto lo verificamos con el assert de la línea 162 en search.py.
+    '''
     if problem.isGoalState(state): return 0
 
     heuristics = []

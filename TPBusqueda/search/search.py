@@ -129,7 +129,7 @@ def uniformCostSearch(problem):
             else:
                 for i in problem.getSuccessors(state):
                     if i[0] not in visited:
-                        nodes.push((i[0], direc + i[1], costo + i[2]), costo + i[2])
+                        nodes.push((i[0], direc + [i[1]], costo + i[2]), costo + i[2])
 
 
 def nullHeuristic(state, problem=None):
@@ -158,7 +158,9 @@ def aStarSearch(problem, heuristic=nullHeuristic):
             else:
                 for i in problem.getSuccessors(state):
                     if i[0] not in visited:
-                        nodes.push((i[0], direc + i[1], costo + i[2]), costo + i[2] + heuristic(i[0],problem))
+                        # verificamos la consistencia de la heurística
+                        assert(heuristic(state,problem) <= 1+heuristic(i[0],problem))
+                        nodes.push((i[0], direc + [i[1]], costo + i[2]), costo + i[2] + heuristic(i[0],problem))
 
 
 # Abbreviations

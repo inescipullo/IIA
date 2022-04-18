@@ -29,6 +29,7 @@ project description for details.
 Good luck and happy searching!
 """
 import time
+from xxlimited import foo
 import search
 import searchAgents
 import util
@@ -475,7 +476,45 @@ def foodHeuristic(state, problem):
     """
     position, foodGrid = state
     "*** YOUR CODE HERE ***"
-    return 0
+
+    heuristic = 0
+    foodList = foodGrid.asList()
+    
+    if len(foodList) > 0:
+        closestPointIndex,costo1 = findClosestPoint(position, foodList)
+        farthestPointIndex,costo2 = findFarthestPoint(position, foodList)
+        
+        currentToClosest = util.manhattanDistance(position, foodList[closestPointIndex])       
+        closestToFarthest = util.manhattanDistance(foodList[closestPointIndex], foodList[farthestPointIndex])
+        
+        heuristic = currentToClosest + closestToFarthest
+    
+    return heuristic
+
+def findClosestPoint(position, foodList):
+    closestPoint = 0
+    closestPointCost = util.manhattanDistance(position, foodList[0])
+    
+    for j in range(len(foodList)-1):
+        lengthToCorner = util.manhattanDistance(position, foodList[j+1])        
+        if lengthToCorner < closestPointCost:
+            closestPoint = j+1
+            closestPointCost = lengthToCorner
+
+    return (closestPoint, closestPointCost) # nos podriamos ahorrar calcular el costo pq no se usa
+
+def findFarthestPoint(position, foodList):
+    farthestPoint = 0
+    farthestPointCost = util.manhattanDistance(position, foodList[0])
+    
+    for j in range(len(foodList)-1):
+        lengthToCorner = util.manhattanDistance(position, foodList[j+1])
+        if lengthToCorner > farthestPointCost:
+            farthestPoint = j+1
+            farthestPointCost = lengthToCorner
+
+    return (farthestPoint, farthestPointCost) # nos podriamos ahorrar calcular el costo pq no se usa
+
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"

@@ -69,7 +69,6 @@ def tinyMazeSearch(problem):
 
 def search(problem, fringe):
     initial_state = problem.getStartState()
-    print(initial_state)
     initial_actions = []
     initial_candidate = (initial_state, initial_actions)
     fringe.push(initial_candidate)
@@ -159,7 +158,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
                 for i in problem.getSuccessors(state):
                     if i[0] not in visited:
                         # verificamos la consistencia de la heurística
-                        assert(heuristic(state,problem) <= 1+heuristic(i[0],problem))
+                        # assert(heuristic(state,problem) <= 1+heuristic(i[0],problem))
                         nodes.push((i[0], direc + [i[1]], costo + i[2]), costo + i[2] + heuristic(i[0],problem))
 
 

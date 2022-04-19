@@ -372,7 +372,7 @@ def cornersHeuristic(state, problem):
     calculados esos valores, la heurística queda determinada por el mínimo de ellos.
 
     Esta heurística es consistente (y por lo tanto también admisible). 
-    Esto lo verificamos con el assert de la línea 162 en search.py.
+    Esto lo verificamos con el assert de la línea 155 en search.py.
     '''
     if problem.isGoalState(state): return 0
 
@@ -386,6 +386,27 @@ def cornersHeuristic(state, problem):
             heuristics.append(util.manhattanDistance(currentPosition, corners[i]) + cornersHeuristic(newState, problem))
     
     return min(heuristics)
+
+'''
+Prueba de consistencia de la heurística cornersHeuristic (llamemosla h):
+
+Probaremos que para todo nodo N y para todo sucesor de N, N' vale que:
+h(N) <= c(N,N') + h(N'), donde c(x,y) es el costo de moverse del nodo x al nodo y
+
+Caso N' es una esquina:
+h(N) 
+= min {distManhattan(N,esq_i) + h(esq_i) | esq_i es una esquina no visitada} 
+<= min {c(N,esq_i) + h(esq_i) | esq_i es una esquina no visitada}
+<= c(N,N') + h(N')
+
+Caso N' no es una esquina:
+h(N) 
+= min {distManhattan(N,esq_i) + h(esq_i) | esq_i es una esquina no visitada} 
+<= min {distManhattan(N,N') + distManhattan(N',esq_i) + h(esq_i) | esq_i es una esquina no visitada}
+= distManhattan(N,N') + min {distManhattan(N',esq_i) + h(esq_i) | esq_i es una esquina no visitada}
+<= c(N,N') + min {distManhattan(N',esq_i) + h(esq_i) | esq_i es una esquina no visitada}
+= c(N,N') + h(N')
+'''
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"
@@ -476,44 +497,31 @@ def foodHeuristic(state, problem):
     """
     position, foodGrid = state
     "*** YOUR CODE HERE ***"
+    '''
+    Calculamos la distancia de manhattan entre la posición actual y la posición de la 
+    comida más lejana. 
+    Optamos por calcular esta heurística por sobre la planteado en clase, porque si 
+    bien es simple, estamos seguras de que es admisible y consistente.
+    '''
 
     heuristic = 0
     foodList = foodGrid.asList()
     
     if len(foodList) > 0:
-        closestPointIndex,costo1 = findClosestPoint(position, foodList)
-        farthestPointIndex,costo2 = findFarthestPoint(position, foodList)
-        
-        currentToClosest = util.manhattanDistance(position, foodList[closestPointIndex])       
-        closestToFarthest = util.manhattanDistance(foodList[closestPointIndex], foodList[farthestPointIndex])
-        
-        heuristic = currentToClosest + closestToFarthest
+        heuristic = findFarthestFoodCost(position, foodList)
     
     return heuristic
 
-def findClosestPoint(position, foodList):
-    closestPoint = 0
-    closestPointCost = util.manhattanDistance(position, foodList[0])
+# Función auxiliar de foodHeuristic
+def findFarthestFoodCost(position, foodList):
+    farthestFoodCost = util.manhattanDistance(position, foodList[0])
     
     for j in range(len(foodList)-1):
-        lengthToCorner = util.manhattanDistance(position, foodList[j+1])        
-        if lengthToCorner < closestPointCost:
-            closestPoint = j+1
-            closestPointCost = lengthToCorner
+        lengthToFood = util.manhattanDistance(position, foodList[j+1])
+        if lengthToFood > farthestFoodCost:
+            farthestFoodCost = lengthToFood
 
-    return (closestPoint, closestPointCost) # nos podriamos ahorrar calcular el costo pq no se usa
-
-def findFarthestPoint(position, foodList):
-    farthestPoint = 0
-    farthestPointCost = util.manhattanDistance(position, foodList[0])
-    
-    for j in range(len(foodList)-1):
-        lengthToCorner = util.manhattanDistance(position, foodList[j+1])
-        if lengthToCorner > farthestPointCost:
-            farthestPoint = j+1
-            farthestPointCost = lengthToCorner
-
-    return (farthestPoint, farthestPointCost) # nos podriamos ahorrar calcular el costo pq no se usa
+    return farthestFoodCost
 
 
 class ClosestDotSearchAgent(SearchAgent):

@@ -500,8 +500,11 @@ def foodHeuristic(state, problem):
     '''
     Calculamos la distancia de manhattan entre la posición actual y la posición de la 
     comida más lejana. 
-    Optamos por calcular esta heurística por sobre la planteado en clase, porque si 
-    bien es simple, estamos seguras de que es admisible y consistente.
+    Optamos por calcular esta heurística por sobre la que les comentamos en clase, porque si 
+    bien es simple, estamos seguras de que es admisible y consistente. Somos conscientes de que 
+    la heurística no es muy buena para tableros llenos de comida, pero para trickySearch la 
+    diferencia de nodos expandidos entre las dos era de poco más de 1000 nodos y priorizamos la 
+    consistencia.
     '''
 
     heuristic = 0

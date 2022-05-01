@@ -75,6 +75,12 @@
 \end{titlepage}
 \ \par
 
+\section*{Resumen}
+El siguiente informe presenta la aplicación Woebot, un chatbot que busca
+proveer una ayuda en el campo de la salud mental, funcionando como un terapeuta 
+cognitivo conductual virtual. Se introducen las técnicas utilizadas por el mismo,
+los estudios realizados sobre su efectividad y un planteo sobre sus implicancias 
+en torno a temas éticos.
 
 \section{Introducción}
 Tal vez es por su tratamiento en la ficción, tal vez es 
@@ -102,7 +108,7 @@ terapeutas congnitivo conductuales.
 Woebot es un chatbot que busca garantizar el acceso a la terapia 
 cognitivo conductual (CBT por sus siglas en inglés) a 
 un rango más extenso de personas (entre ellas, personas 
-sin los suficientes recursos económicos\footnotemark[1]\footnote[1]{Hoy la aplicación de Woebot es gratuita 
+sin los suficientes recursos económicos\footnotemark[1]\footnote[1]{Hoy la aplicación de \href{https://woebothealth.com/referral/}{Woebot} es gratuita 
 al recibir finanaciamiento a través de un fondo de 
 capital emprendedor. Pero según establecido por su 
 fundadora se apunta a que algún día la aplicación 
@@ -121,30 +127,59 @@ que se pueden dar en cualquier momento).
 %Resulta de especial interés para la materia ver qué técnicas de IA usa esta aplicación. 
 El principal objetivo de la aplicación es poder tener una conversación que genere una conexión
 lo suficientemente fuerte para que la terapia resulte provechosa. Surge, entonces una clara 
-pregunta: "¿cómo puede una máquina entendernos y generar una conversación humana?".
+pregunta: ``¿cómo puede una máquina entendernos y generar una conversación humana?".
 
 La rama de las ciencias de la computación cuyo objetivo es estudiar las interacciones entre las computadoras y el lenguaje humano
 se llama Procesamiento de Lenguaje Natural (NLP de sus siglas en inglés 
-\textit{Natural Language Processing}) y en las técnicas desarrolladas por ella es que el funcionamiento de Woebot se basa. 
+\textit{Natural Language Processing}) y en las técnicas desarrolladas por ella es que  se basa el funcionamiento de Woebot. 
 
-La idea general para procesar lenguaje natural es la siguiente: 
+La idea general para procesar lenguaje natural es que primero se segmenta y 
+tokeniza el texto ingresado, es decir, primero se lo separa en oraciones y luego 
+en palabras para empezar su análisis. 
 
-1. Primero se segmenta y tokeniza el texto ingresado, es decir, primero se lo separa en oraciones y luego en palabras para empezar su análisis. 
+Una vez tokenizado el texto, las palabras se normalizan, dándoles sentido a aquellas que estén 
+escritas incorrectamente, y se lematizan, asociándolas con su lema o palabra raíz (sustantivo 
+masculino singular o verbo infinitivo). 
+En este paso del procesamiento del lenguaje, si bien podrían ser suficiente herramienta las 
+expresiones regulares, ya se va vislumbrando la aplicación que tiene la inteligencia artificial 
+aquí, puesto que el proceso de normalización de las palabras puede verse como un caso particular 
+de traducción de máquina (para lo que se pueden requerir técnicas particulares de Neural Machine 
+Translation).
 
-2. Una vez tokenizado el texto, las palabras serán normalizadas, dándoles sentido a palabras que estén escritas incorrectamente, para 
-posteriormente ser lematizadas (es decir, asociadas con su lema o palabra raíz- sustantivo masculino singular o verbo infinitivo). 
+Para el momento que sí definitivamente se requiere el uso de técnicas de inteligencia artificial 
+es para el paso siguiente: la denotación del texto. Para que la máquina entienda lo que 
+el usuario le comunica, se usan distintas técnicas de parafraseo computacinal entre las que 
+destaca el uso de modelos de \textit{Long Short Term Memory} (una arquitectura particular de redes 
+neuronales recurrentes) y de \textit{Multiple Sequence Alignment} (un método basado en corpus paralelo monolingüístico). 
 
-3. 
-....
+A la vez que se busca darle el sentido denotado a la entrada Woebot en especial, se tiene 
+que asegurar de entender el sentido connotado de los mensajes que recibe. Existe un área 
+específica del Procesamiento de Lenguaje Natural llamada Análisis de Sentimiento, que también 
+es conocida como Minería de Opinión, y es en este área que Woebot busca destacarse. 
+Para el análisis de sentimiento se hacen uso de distintas técnicas 
+de aprendizaje automatizado, tales como la Indexación Semántica Latente (variación del modelo vectorial)
+o el uso del modelo ``bolsa de palabras" (que busca analizar documentos ignorando el orden en el que las palabras aparecen),
+ y de elementos de representación de conocimiento, tales 
+como ontologías y redes semánticas.
 
-Para poder realizar todo este proceso ...
+Pero para poder generar un chatbot no nos basta solo con asignarle sentido a la entrada, 
+sino que debemos poder generar una respuesta para esa entrada. Para lograr esto se usan métodos de 
+Question Answering que permiten crear las correctas queries para la recuperación de información en bases de conocimiento.
 
 
 % Para realizar el procesamiento del lenguaje natural se hacen uso de redes neuronales
+Todo este trabajo requiere de múltiples y diversos esfuerzos para asegurar 
+su correcto funcionamiento. Por eso mismo
+el grupo que desarrolla Woebot, llamado Woebot Health, es un grupo interdisciplinario que conjuga especialistas en 
+psicoterapia y especialistas en inteligencia artificial. 
 
-El grupo que desarrolla Woebot es Woebot Health, un grupo interdisciplinario que conjuga especialistas en psicoterapia y especialistas en inteligencia artificial fundado y dirigido por Alison Darcy, doctora de la Universidad de Standford.
-
-Diversos estudios fueron publicados (muchos de ellos contando con colaboración del Departamento de Psiquiatría de la Escuela de Medicina de la Universidad de Standford) demostrando la eficiencia de Woebot para ayudar en cuadros generales de depresión y ansiedad, en casos de abuso de sustancias y en cuadros de depresión post-parto.
+El grupo fue fundado y es dirigido por Alison Darcy, doctora de la Universidad de Standford, y desde
+su fundación diversos estudios fueron publicados 
+(muchos de ellos contando con colaboración del Departamento de Psiquiatría 
+de la Escuela de Medicina de la Universidad de Standford) demostrando la 
+eficiencia de Woebot para ayudar como lo podría lograr un terapeuta humano (Darcy, Daniels, Salinger, Wicks \& Robinson, 2021; Ho, Hancock \& Milner, 2018). 
+Otros estudios realizados se concentraron en el uso de la aplicación para cuadros generales de depresión y ansiedad (Martínez-Miranda, 2017), 
+en casos de abuso de sustancias (Prochaska, Vogel, Chieng, Kendra \& Baiocchi, 2021) y en cuadros de depresión post-parto (Ramachandran \& Suharwardy, 2020).
 Referencias a los mismos y resúmenes sobre sus resultados 
 junto con otros artículos que podrían resultar de interés
 se pueden encontrar en el \href{https://woebothealth.com/img/2021/05/Woebot-Health-Research-Bibliography_May-2021-1-1.pdf}{Woebot Health Research Book}.
@@ -152,7 +187,7 @@ se pueden encontrar en el \href{https://woebothealth.com/img/2021/05/Woebot-Heal
 \section{Sobre las implicancias de Woebot}
 
 La psicología requiere un tratamiento más que sensible
-con el paciente en general pero también con sus datos.
+con el paciente en general; pero también con sus datos.
 El secreto profesional es algo que se da por sentado en
 una sesión terapéutica con un profesional pero, ¿dónde cae
 el secreto en un programa que necesita guardar explícitamente
@@ -203,8 +238,8 @@ necesitando de inteligencia humana y, principalmente,
 aprendiendo de lo que pudimos enseñar.
 
 Ahora bien, no hay que perder de vista que se necesita 
-de un esfuerzo aunado para establecer
-tanto marcos morales como legales que permitan el desarrollo 
+de un esfuerzo aunado para establecer marcos 
+tanto morales como legales que permitan el desarrollo 
 metódico y ordenado
 de las inteligencias que queremos. El desarrollo de 
 comisiones internacionales que regulen las 
@@ -256,8 +291,13 @@ URL: \url{https://doi.org/10.1145/2974804.2974820}
 DOI: 10.1145/2974804
 
 \item Prochaska J., Vogel E., Chieng A., Kendra M., Baiocchi M., Pajarito S., Robinson A.:
-A Therapeutic Relational Agent for Reducing Problematic Substance Use (Woebot): Development and Usability Study, 
+\textit{A Therapeutic Relational Agent for Reducing Problematic Substance Use (Woebot): Development and Usability Study}, 
 URL: \url{https://www.jmir.org/2021/3/e24850},
 DOI: 10.2196/24850
+
+\item Ramachandran M., Suharwardy S.: \textit{Acceptability of Postnatal Mood Management Through a Smartphone-based
+Automated Conversational Agent},
+URL: \url{https://www.ajog.org/article/S0002-9378(19)31460-7/fulltext},
+DOI: 10.1016/201911090
 \end{enumerate}
 \end{document}

@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-4="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#contiene_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#contiene_a">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#está_en"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#depende_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#depende_de">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_poder_sobre"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#es_gobernado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#es_gobernado_por">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#es_parte_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#es_parte_de">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Alianza_militar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#está_en -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#está_en">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#pertenece_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#pertenece_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo_económico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#posee_armamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#posee_armamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#se_ubica_en -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#se_ubica_en">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_armamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_armamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_armamento_nuclear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_armamento_nuclear">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_armamento"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_nuclear"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_poder_sobre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_poder_sobre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_misión -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_misión">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#ONG"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_población_de -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#tiene_población_de">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Alianza_militar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Alianza_militar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_aéreo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_aéreo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_naval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_naval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_nuclear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_nuclear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo_económico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo_económico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Junta_militar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Junta_militar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Monarquía -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Monarquía">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#ONG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#ONG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Forma_de_gobierno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#depende_de"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#América -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#América">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Argentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Argentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <es_gobernado_por rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República_presidencial"/>
+        <está_en rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#América"/>
+        <pertenece_a rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Mercosur"/>
+        <tiene_población_de rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45380000</tiene_población_de>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Asia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Asia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+        <tiene_población_de rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4701010000</tiene_población_de>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Europa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Europa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Gibraltar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Gibraltar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+        <depende_de rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Reino_Unido"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Irán -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Irán">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Islas_Caimán -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Islas_Caimán">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Territorio_dependiente"/>
+        <depende_de rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Reino_Unido"/>
+        <se_ubica_en rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#América"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Mercosur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Mercosur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Grupo_económico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Misiles_nucleares_Trident -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Misiles_nucleares_Trident">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Armamento_nuclear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Monarquía_parlamentaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Monarquía_parlamentaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Monarquía"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#OTAN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#OTAN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Alianza_militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Oceanía -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Oceanía">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Pacto_de_Varsovia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Pacto_de_Varsovia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Alianza_militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Reino_Unido -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Reino_Unido">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <tiene_armamento_nuclear rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Misiles_nucleares_Trident"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República_presidencial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República_presidencial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#República"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Rusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Rusia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#País"/>
+        <es_parte_de rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Pacto_de_Varsovia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia_chiita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia_chiita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia"/>
+        <es_gobernado_por rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Teocracia_chiita"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#UNICEF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#UNICEF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#ONG"/>
+        <tiene_misión rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protección e inclusión de los niños</tiene_misión>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#África -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#África">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrador/ontologies/2022/4/untitled-ontology-4#Continente"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

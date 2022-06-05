@@ -88,33 +88,54 @@
 
 La cantidad de seguidores del perfíl
 
-cantidad de seguidores del perfil
-promedio de reproducciones de videos en el perfil
--> cantidad de perfiles de prueba
+hora en la que se publica el video (H) 
+incidencia de la temática en la actualidad (T)
+-> cantidad de perfiles de prueba -- 10k - (C)
+
+longitud de video (L)
+cantidad de perfiles de prueba (C)
+interacción positiva del vídeo (I)
+porcentaje de perfiles de prueba que interactuaron de manera positiva con el vídeo (I) 
+-> popularidad del video (P) -- 
+
+determinada por las views del vídeo luego de las primeras 48hs -> impopoular (menos de 1k) normal (entre 10k - 100k) o popular (entre 100k - 1m)
+
+\section{Problema}
+
+Es innegable el impacto que tienen las redes sociales hoy en día para definir nuestros valores, 
+comportamientos y creencias. La realidad es que las generaciones actuales no solo nos informamos
+con el contenido que vemos en ellas sino que también nos formamos a través de él.
+
+Partidarios de todas las ideas y creencias se encuentran en las redes sociales y son demasiados
+los mensajes que llegan a miles y millones de personas al mismo tiempo, y el potencial de eso
+podría ser tanto esperanzador como peligroso. 
+
+Por eso, resulta
+más que lógico el estar interesado en cómo es que se generan esos mensajes que nos llegan a todos,
+es decir,
+cómo es que se genera el contenido viral.
+
+Se desea, entonces, en este trabajo poder predecir la popularidad vídeos publicados en la red TikTok
+publicados por cuentas nuevas, 
+valiéndonos en distintos datos incidentes. 
 
 
-cantidad de perfiles de prueba
-duracion de las vistas de prueba
-cantidad de interacciones positivas
--> popularidad del video
+explicar como funciona tiktok -> primero se le presenta el video a unos perfiles etc
 
-
-
-
-
-
-\section*{Descripción del problema}
-
-Una cooperativa de diarios y revistas quiere maximizar la cantidad de lectores de los productos que ofrecen. La cooperativa llevó a cabo una encuesta en el último mes que permitió recabar datos que creen pueden servir para aumentar la cantidad de lectores.
+%Una cooperativa de diarios y revistas quiere maximizar la cantidad de lectores de los productos que ofrecen. La cooperativa llevó a cabo una encuesta en el último mes que permitió recabar datos que creen pueden servir para aumentar la cantidad de lectores.
 
 \begin{center}
 	\begin{tabular}{|l}
-	La \textbf{longitud de la nota} y la \textbf{velocidad de escritura} de le periodista afectarán\\ el \textbf{tiempo que toma redactar} una nota para publicar.\\\\
+	La \textbf{hora en la que se publica el vídeo} y la \textbf{relevancia de la temática} en \\
+	la actualidad determinarán la \textbf{cantidad de perfiles de prueba} a los que se le \\
+	mostrará el vídeo en una primera instancia\\\\
 
-	El \textbf{tiempo de redacción} de la nota, la \textbf{reputación de le periodista}\\ y la \textbf{popularidad de la temática} de la que se escriba\\ influirán enormemente en la \textbf{cantidad de lectores} de esa nota.
+	La \textbf{cantidad de perfiles de prueba} del vídeo, la \textbf{longitud del vídeo} y la \\
+	\textbf{interacción positiva} con el vídeo influirán enormemente en la \\ \textbf{cantidad de lectores} de esa nota.
 	\end{tabular}
 \end{center}
 
+\iffalse
 \subsubsection*{Longitud de la nota (L)}
 
 La longitud de la nota puede ser corta, media o larga y puede variar de 100 a 600 palabras. Una nota de hasta 200 palabras se considera corta, una de entre 267 a 433 se considera media y una de más de 500 palabras se considera larga.
@@ -138,7 +159,25 @@ La popularidad de una temática en particular puede ser baja, media o alta y est
 \subsubsection*{Cantidad de lectores por nota (C)}
 
 La cantidad de lectores de una nota puede ser baja, medio-baja, medio-alta o alta y puede variar entre 0 y 1000 según los resultados arrojados por la encuesta. La cantidad de lectores de una nota es baja si la leen menos de 100 personas, medio-baja si la leen entre 200 y 400 personas, medio-alta si la leen entre 600 y 800 personas y alta si la leen más de 900 personas.
+\fi
 
+\section{Modelado}
+
+\subsection{Variables lingüísticas}
+
+\begin{enumerate}
+	\item \textbf{Hora en la que se publica el vídeo (H)}: determinada por los conjuntos borrosos hora pico, 
+\end{enumerate}
+
+\subsection{Inferencia}
+
+\section{Pruebas y ajustes de parámetros}
+
+\section{Resultados}
+
+\section{Conclusiones}
+
+\section{Bibliografía}
 
 \pagebreak
 \section*{Resultados de la encuesta - reglas del modelo}

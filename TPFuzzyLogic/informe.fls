@@ -75,10 +75,28 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/hora_publicacion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/hora_publicacion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/hora_publicacion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/relevancia_temática.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/relevancia_temática.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/relevancia_temática.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/perfiles_prueba_cant.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/perfiles_prueba_cant.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/perfiles_prueba_cant.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/duracion_video.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/duracion_video.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/duracion_video.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/tipo_interaccion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/tipo_interaccion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/tipo_interaccion.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/popularidad.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/popularidad.png
+INPUT /Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/popularidad.png
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm

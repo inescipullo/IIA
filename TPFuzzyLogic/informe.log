@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.17)  5 JUN 2022 23:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.17)  6 JUN 2022 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -232,79 +232,112 @@ Overfull \hbox (98.77008pt too wide) in paragraph at lines 63--64
 
 [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/header.png>] [1]
-Overfull \hbox (10.74794pt too wide) in paragraph at lines 126--134
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/header.png>]
+Overfull \hbox (10.74794pt too wide) in paragraph at lines 122--130
  [] 
  []
 
-[2] [3] [4] [5] [6]
+[1]
+<./Images/hora_publicacion.png, id=16, 595.22375pt x 386.44376pt>
+File: ./Images/hora_publicacion.png Graphic file (type png)
+<use ./Images/hora_publicacion.png>
+Package pdftex.def Info: ./Images/hora_publicacion.png  used on input line 168.
+(pdftex.def)             Requested size: 297.61115pt x 193.2214pt.
+<./Images/relevancia_temática.png, id=17, 511.9125pt x 358.33875pt>
+File: ./Images/relevancia_temática.png Graphic file (type png)
+<use ./Images/relevancia_temática.png>
+Package pdftex.def Info: ./Images/relevancia_temática.png  used on input line 173.
+(pdftex.def)             Requested size: 307.14987pt x 215.0049pt.
+ [2 </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/hora_publicacion.png>]
+<./Images/perfiles_prueba_cant.png, id=23, 563.10374pt x 381.425pt>
+File: ./Images/perfiles_prueba_cant.png Graphic file (type png)
+<use ./Images/perfiles_prueba_cant.png>
+Package pdftex.def Info: ./Images/perfiles_prueba_cant.png  used on input line 178.
+(pdftex.def)             Requested size: 281.55118pt x 190.71202pt.
+<./Images/duracion_video.png, id=24, 517.935pt x 355.3275pt>
+File: ./Images/duracion_video.png Graphic file (type png)
+<use ./Images/duracion_video.png>
+Package pdftex.def Info: ./Images/duracion_video.png  used on input line 183.
+(pdftex.def)             Requested size: 310.76338pt x 213.19814pt.
+ [3 </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/relevancia_temática.png> </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/perfiles_prueba_cant.png>]
+<./Images/tipo_interaccion.png, id=30, 560.0925pt x 355.3275pt>
+File: ./Images/tipo_interaccion.png Graphic file (type png)
+<use ./Images/tipo_interaccion.png>
+Package pdftex.def Info: ./Images/tipo_interaccion.png  used on input line 188.
+(pdftex.def)             Requested size: 308.05182pt x 195.43071pt.
+<./Images/popularidad.png, id=31, 594.22pt x 363.3575pt>
+File: ./Images/popularidad.png Graphic file (type png)
+<use ./Images/popularidad.png>
+Package pdftex.def Info: ./Images/popularidad.png  used on input line 193.
+(pdftex.def)             Requested size: 326.822pt x 199.84723pt.
+ [4 </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/duracion_video.png> </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/tipo_interaccion.png>] [5 </Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/./Images/popularidad.png>] [6] [7] [8]
 
-LaTeX Warning: Reference `fig:etapa1-entrada' on page 7 undefined on input line 261.
+LaTeX Warning: Reference `fig:etapa1-entrada' on page 9 undefined on input line 300.
 
 
-LaTeX Warning: Reference `fig:etapa1-salida' on page 7 undefined on input line 261.
+LaTeX Warning: Reference `fig:etapa1-salida' on page 9 undefined on input line 300.
 
 
-LaTeX Warning: Reference `fig:etapa2-entrada' on page 7 undefined on input line 261.
+LaTeX Warning: Reference `fig:etapa2-entrada' on page 9 undefined on input line 300.
 
 
-LaTeX Warning: Reference `fig:etapa2-salida' on page 7 undefined on input line 261.
+LaTeX Warning: Reference `fig:etapa2-salida' on page 9 undefined on input line 300.
 
-[7]
-Underfull \hbox (badness 6893) in paragraph at lines 304--304
+[9]
+Underfull \hbox (badness 6893) in paragraph at lines 343--343
 []\OT1/cmr/m/n/9 (c) |Pop-u-lar-i-dad de la
  []
 
-[8]
+[10]
 
-LaTeX Warning: Reference `fig:reglas' on page 9 undefined on input line 358.
+LaTeX Warning: Reference `fig:reglas' on page 11 undefined on input line 397.
 
-[9]
-Overfull \hbox (26.86578pt too wide) in paragraph at lines 384--390
+[11]
+Overfull \hbox (26.86578pt too wide) in paragraph at lines 423--429
  [][] 
  []
 
-[10] [11]
-Overfull \hbox (26.86578pt too wide) in paragraph at lines 412--418
- [][] 
- []
-
-[12]
-Overfull \hbox (194.86604pt too wide) in paragraph at lines 440--446
- [][] 
- []
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 448.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 448.
- [13]
-Overfull \hbox (194.86604pt too wide) in paragraph at lines 472--479
+[12] [13]
+Overfull \hbox (26.86578pt too wide) in paragraph at lines 451--457
  [][] 
  []
 
 [14]
-Overfull \hbox (194.86604pt too wide) in paragraph at lines 506--511
+Overfull \hbox (194.86604pt too wide) in paragraph at lines 479--485
  [][] 
  []
 
-[15]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 487.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 487.
+ [15]
+Overfull \hbox (194.86604pt too wide) in paragraph at lines 511--518
+ [][] 
+ []
 
-/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.tex:533: LaTeX Error: \begin{itemize} on input line 179 ended by \end{document}.
+[16]
+Overfull \hbox (194.86604pt too wide) in paragraph at lines 545--550
+ [][] 
+ []
+
+[17]
+
+/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.tex:572: LaTeX Error: \begin{itemize} on input line 201 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.533 \end{document}
+l.572 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[16] (/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.aux)
+[18] (/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -314,21 +347,21 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 179 (\begingroup)
+### semi simple group (level 1) entered at line 201 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 4185 strings out of 480608
- 71536 string characters out of 5903630
- 318765 words of memory out of 5000000
- 20052 multiletter control sequences out of 15000+600000
+ 4222 strings out of 480608
+ 72655 string characters out of 5903630
+ 318747 words of memory out of 5000000
+ 20082 multiletter control sequences out of 15000+600000
  538345 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,12n,46p,695b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.pdf" (17 pages, 224136 bytes).
+Output written on "/Users/inescipullo/Documents2.0/Introduccion a la Inteligencia Artificial/IIA/TPFuzzyLogic/informe.pdf" (19 pages, 306241 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

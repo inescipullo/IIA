@@ -1,6 +1,6 @@
 [System]
 Name='TikTok1'
-Ninputs=1
+Ninputs=2
 Noutputs=1
 Nrules=0
 Nexceptions=0
@@ -15,6 +15,15 @@ NMFs=3
 MF1='baja','SemiTrapezoidalInf',[       0.000 ,       0.100 ,       0.300 ]
 MF2='media','triangular',[       0.300 ,       0.500 ,       0.700 ]
 MF3='alta','SemiTrapezoidalSup',[       0.700 ,       0.900 ,       1.000 ]
+
+[Input2]
+Active='yes'
+Name='hora_publicación'
+Range=[       0.000 ,      24.000 ]
+NMFs=3
+MF1='pico','trapezoidal',[      10.000 ,      11.000 ,      17.000 ,      18.000 ]
+MF2='valle1','SemiTrapezoidalInf',[       0.000 ,      10.000 ,      11.000 ]
+MF3='valle2','SemiTrapezoidalSup',[      17.000 ,      18.000 ,      24.000 ]
 
 [Output1]
 Nature='fuzzy'

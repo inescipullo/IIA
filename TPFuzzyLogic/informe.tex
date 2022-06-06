@@ -92,13 +92,13 @@ hora en la que se publica el video (H)
 incidencia de la temática en la actualidad (T)
 -> cantidad de perfiles de prueba -- 10k - (C)
 
-longitud de video (L)
+duracion de video (L)
 cantidad de perfiles de prueba (C)
-interacción positiva del vídeo (I)
-porcentaje de perfiles de prueba que interactuaron de manera positiva con el vídeo (I) 
+tipo  de interacción con el video (I)
+porcentaje de perfiles de prueba que interactuaron de manera positiva con el video (I) 
 -> popularidad del video (P) -- 
 
-determinada por las views del vídeo luego de las primeras 48hs -> impopoular (menos de 1k) normal (entre 10k - 100k) o popular (entre 100k - 1m)
+determinada por las views del video luego de las primeras 48hs -> impopular (menos de 1k) normal (entre 10k - 100k) o popular (entre 100k - 1m)
 
 \section{Problema}
 
@@ -106,32 +106,30 @@ Es innegable el impacto que tienen las redes sociales hoy en día para definir n
 comportamientos y creencias. La realidad es que las generaciones actuales no solo nos informamos
 con el contenido que vemos en ellas sino que también nos formamos a través de él.
 
-Partidarios de todas las ideas y creencias se encuentran en las redes sociales y son demasiados
-los mensajes que llegan a miles y millones de personas al mismo tiempo, y el potencial de eso
+Partidarios de todas las ideas y creencias se encuentran en las redes sociales. Son demasiados
+los mensajes que llegan a miles y millones de personas al mismo tiempo y el potencial de eso
 podría ser tanto esperanzador como peligroso. 
 
-Por eso, resulta
-más que lógico el estar interesado en cómo es que se generan esos mensajes que nos llegan a todos,
-es decir,
-cómo es que se genera el contenido viral.
+Por eso, resulta más que lógico el estar interesado en cómo es que se generan esos mensajes que 
+nos llegan a todos, es decir, cómo es que se genera el contenido viral.
 
-Se desea, entonces, en este trabajo poder predecir la popularidad vídeos publicados en la red TikTok
+Se desea, entonces, en este trabajo poder predecir la popularidad videos publicados en la red TikTok
 publicados por cuentas nuevas, 
 valiéndonos en distintos datos incidentes. 
 
 
-explicar como funciona tiktok -> primero se le presenta el video a unos perfiles etc
+% explicar como funciona tiktok -> primero se le presenta el video a unos perfiles etc
 
 %Una cooperativa de diarios y revistas quiere maximizar la cantidad de lectores de los productos que ofrecen. La cooperativa llevó a cabo una encuesta en el último mes que permitió recabar datos que creen pueden servir para aumentar la cantidad de lectores.
 
 \begin{center}
 	\begin{tabular}{|l}
-	La \textbf{hora en la que se publica el vídeo} y la \textbf{relevancia de la temática} en \\
+	La \textbf{hora en la que se publica el video} y la \textbf{relevancia de la temática} en \\
 	la actualidad determinarán la \textbf{cantidad de perfiles de prueba} a los que se le \\
-	mostrará el vídeo en una primera instancia\\\\
+	mostrará el video en una primera instancia\\\\
 
-	La \textbf{cantidad de perfiles de prueba} del vídeo, la \textbf{longitud del vídeo} y la \\
-	\textbf{interacción positiva} con el vídeo influirán enormemente en la \\ \textbf{cantidad de lectores} de esa nota.
+	La \textbf{cantidad de perfiles de prueba} del video, la \textbf{duración del video} y la \\
+	\textbf{tipo de interacción} con el video influirán enormemente en la \\ \textbf{popularidad del video}.
 	\end{tabular}
 \end{center}
 
@@ -165,13 +163,39 @@ La cantidad de lectores de una nota puede ser baja, medio-baja, medio-alta o alt
 
 \subsection{Variables lingüísticas}
 
-\begin{enumerate}
-	\item \textbf{Hora en la que se publica el vídeo (H)}: determinada por los conjuntos borrosos hora pico, 
-\end{enumerate}
+\begin{itemize}
+	\item \textbf{Hora en la que se publica el video (H)}: determinada por los conjuntos borrosos hora pico y hora valle. Estos están a su vez determinados por la predicción de la cantidad de personas que estarán haciendo uso de la red social en ese momento del día, que será alta en la hora pico y baja en la hora valle. En Argentina se podría considerar hora pico de 11:00 a 17:00 horas.
+	\item \textbf{Relevancia de la temática en la actualidad (T)}: la relevancia de una temática en particular puede ser baja, media o alta y está representada por un índice del 0 al 1.
+ 	\item \textbf{Cantidad de perfiles de prueba (C)}: hace referencia a la cantidad de perfiles a los que se le muestra el video en una primera instancia, y varía de 10 a 10000. La cantidad de perfiles de prueba es baja si es menor de 1500, es media si está entre 4000 y 6000, y es alta si es igual o mayor a 8500.
+ 	\item \textbf{Duración del video (D)}: medido en cantidad de minutos, se puede decir que es corta, media o larga y va desde 0 a 10 minutos, siendo corta de 0 a 1 minuto, media de 1 a 3 minutos y larga si es mayor de 3 minutos.
+	\item \textbf{Tipo de interacción con el video (I)}: medida como el porcentaje de perfiles de prueba que tuvieron una o más interacciones positivas sobre el video. Se considera negativa si es menor al $5\%$, regular si es alrededor del $10\%$ y positiva si es más del $20\%$.
+	\item \textbf{Popularidad del video (P)}: para representar esta variable lingüistica se utilizan 4 conjuntos borrosos definidos a partir de un índice del 0 al 1. Estos son: impopular (de 0 a 0.25), semi-popular (de 0.4 a 0.5), popular (de 0.7 a 0.8) y viral (mayor a 0.9).
+\end{itemize}
 
-\subsection{Inferencia}
+\subsection{Reglas de inferencia}
+
+Planteamos las reglas de inferencia utilizando la aritmética lógica adaptada al lenguaje natural, para presentarlas de forma compacta. En la herramienta \\ \verb|fispro|, alguna de estas operaciones lógicas no se soportan y entonces se plantean, en su lugar, un conjunto de reglas por cada una de ellas.
+
+\begin{itemize}
+	\item Reglas relativas a la primera etapa
+	\begin{itemize}
+		\item [\textbf{R1}] H hora pico y T alta o media $\rightarrow$ C alta 
+		\item [\textbf{R2}] H hora pico o valle y T baja $\rightarrow$ C baja 
+		\item [\textbf{R3}] H hora valle y T alta o media $\rightarrow$ C media 
+	\end{itemize}
+	\item Reglas relativas a la segunda etapa
+	\begin{itemize}
+		\item [\textbf{S1}] C alta, D corta e I positiva $\rightarrow$ P viral
+		\item [\textbf{S2}] C media o alta, D corta o media e I positiva $\rightarrow$ P popular
+		\item [\textbf{S3}] C media, D larga e I positiva $\rightarrow$ P semi-popular
+		\item [\textbf{S4}] C baja o media, D media e I regular $\rightarrow$ P semi-popular
+		\item [\textbf{S5}] I semi-regular o negativa $\rightarrow$ P impopular
+
+\end{itemize}
 
 \section{Pruebas y ajustes de parámetros}
+
+% una por cada regla
 
 \section{Resultados}
 

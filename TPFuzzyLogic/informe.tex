@@ -11,7 +11,7 @@
 \usepackage{fancyhdr}
 % \usepackage{nameref}
 % \usepackage{wrapfig}
-% \usepackage{hyperref}
+\usepackage{hyperref}
 
 
 \usepackage{float}
@@ -82,21 +82,6 @@
 
 
 
-
-% La cantidad de seguidores del perfíl
-
-% hora en la que se publica el video (H) 
-% incidencia de la temática en la actualidad (T)
-% -> cantidad de perfiles de prueba -- 10k - (C)
-
-% duracion de video (L)
-% cantidad de perfiles de prueba (C)
-% tipo  de interacción con el video (I)
-% porcentaje de perfiles de prueba que interactuaron de manera positiva con el video (I) 
-% -> popularidad del video (P) -- 
-
-% determinada por las views del video luego de las primeras 48hs -> impopular (menos de 1k) normal (entre 10k - 100k) o popular (entre 100k - 1m)
-
 \section{Problema}
 
 Es innegable el impacto que tienen las redes sociales hoy en día para definir nuestros valores, 
@@ -110,50 +95,21 @@ podría ser tanto esperanzador como peligroso.
 Por eso, resulta más que lógico el estar interesado en cómo es que se generan esos mensajes que 
 nos llegan a todos, es decir, cómo es que se genera el contenido viral.
 
-Se desea, entonces, en este trabajo poder predecir la popularidad videos publicados en la red TikTok 
+Se desea, entonces, en este trabajo poder predecir la popularidad de videos publicados en la red TikTok 
 por cuentas nuevas, valiéndonos en distintos datos incidentes. 
 
-
-% explicar como funciona tiktok -> primero se le presenta el video a unos perfiles etc
-
-%Una cooperativa de diarios y revistas quiere maximizar la cantidad de lectores de los productos que ofrecen. La cooperativa llevó a cabo una encuesta en el último mes que permitió recabar datos que creen pueden servir para aumentar la cantidad de lectores.
 
 \begin{center}
 	\begin{tabular}{|l}
 	La \textbf{hora en la que se publica el video} y la \textbf{relevancia de la temática} en \\
 	la actualidad determinarán la \textbf{cantidad de perfiles de prueba} a los que se le \\
-	mostrará el video en una primera instancia\\\\
+	mostrará el video en una primera instancia.\\\\
 
-	La \textbf{cantidad de perfiles de prueba} del video, la \textbf{duración del video} y la \\
+	La \textbf{cantidad de perfiles de prueba} del video, la \textbf{duración del video} y el \\
 	\textbf{tipo de interacción} con el video influirán enormemente en la \\ \textbf{popularidad del video}.
 	\end{tabular}
 \end{center}
 
-\iffalse
-\subsubsection*{Longitud de la nota (L)}
-
-La longitud de la nota puede ser corta, media o larga y puede variar de 100 a 600 palabras. Una nota de hasta 200 palabras se considera corta, una de entre 267 a 433 se considera media y una de más de 500 palabras se considera larga.
-
-\subsubsection*{Velocidad de escritura (V)}
-
-La velocidad de escritura de une periodista puede ser lenta, media o rápida y se mide en cantidad de palabras tipeadas por minuto la cual puede variar de 10 a 70 palabras por minuto. Una persona que escribe entre 10 y 40 palabras por minuto se considera lenta, una que escribe entre 45 y 55 se considera media y una que escribe más de 60 palabras por minuto se considera rápida.
-
-\subsubsection*{Tiempo de redacción (T)}
-
-El tiempo de redacción puede ser corto, medio o largo y se mide en día y horas. Una nota que se escribe en a lo sumo 2 días tiene un tiempo de redacción corto, una que se escribe entre 2 días; 8 horas y 3 días; 16 horas tiene un tiempo de redacción medio mientras que una que toma más de 4 dias tiene un tiempo de redacción largo.
-
-\subsubsection*{Reputación de quien escribe la nota (R)}
-
-La reputación de le periodista puede ser mala o buena y está indicada por un índice entre 0 y 1 siendo 0 la peor reputación y 1 la máxima. Hasta 0.3 se considera que le periodista tiene una reputación mala mientras que desde 0.7 se considera buena.
-
-\subsubsection*{Popularidad de la temática (P)}
-
-La popularidad de una temática en particular puede ser baja, media o alta y está representada por un índice el 0 a 1 siendo 0 la popularidad más baja y 1 la más alta. Las categorías de deportes y de política tienen popularidad de 0.9 y 1 respectivamente mientras que Rural tiene 0.1 de popularidad. Economía y finanzas tiene una popularidad de 0.85.
-
-\subsubsection*{Cantidad de lectores por nota (C)}
-
-La cantidad de lectores de una nota puede ser baja, medio-baja, medio-alta o alta y puede variar entre 0 y 1000 según los resultados arrojados por la encuesta. La cantidad de lectores de una nota es baja si la leen menos de 100 personas, medio-baja si la leen entre 200 y 400 personas, medio-alta si la leen entre 600 y 800 personas y alta si la leen más de 900 personas.
-\fi
 
 \section{Modelado}
 
@@ -172,7 +128,7 @@ Se presentan las variables lingüísticas de entrada y salida de ambas etapas de
 		\centering
 		\includegraphics[scale=0.55]{./Images/relevancia_temática.png}
 	\end{figure}
-	\item \textbf{Cantidad de perfiles de prueba (C)}: hace referencia a la cantidad de perfiles a los que se le muestra el video en una primera instancia, y varía de 10 a 10000. La cantidad de perfiles de prueba es baja si es menor de 1500, es media si está entre 4000 y 6000, y es alta si es igual o mayor a 8500.
+	\item \textbf{Cantidad de perfiles de prueba (C)}: hace referencia a la cantidad de perfiles a los que se le muestra el video en una primera instancia, y varía de 10 a 10000. La cantidad de perfiles de prueba es poca si es menor de 1500, es media si está entre 4000 y 6000, y es alta si es igual o mayor a 8500.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{./Images/perfiles_prueba_cant.png}
@@ -196,377 +152,133 @@ Se presentan las variables lingüísticas de entrada y salida de ambas etapas de
 
 \subsection{Reglas de inferencia}
 
-Planteamos las reglas de inferencia utilizando la aritmética lógica adaptada al lenguaje natural, para presentarlas de forma compacta. En la herramienta \\ \verb|fispro|, alguna de estas operaciones lógicas no se soportan y entonces se plantean, en su lugar, un conjunto de reglas por cada una de ellas.
+Planteamos las reglas de inferencia utilizando la aritmética lógica adaptada al lenguaje natural, para presentarlas de forma compacta. 
 
 \begin{itemize}
 	\item Reglas relativas a la primera etapa
 	\begin{itemize}
 		\item [\textbf{R1}] H hora pico y T alta o media $\rightarrow$ C alta 
-		\item [\textbf{R2}] H hora pico o valle y T baja $\rightarrow$ C baja 
+		\item [\textbf{R2}] H hora pico o valle y T baja $\rightarrow$ C poca 
 		\item [\textbf{R3}] H hora valle y T alta o media $\rightarrow$ C media 
 	\end{itemize}
 	\item Reglas relativas a la segunda etapa
 	\begin{itemize}
 		\item [\textbf{S1}] C alta, D corta e I positiva $\rightarrow$ P viral
-		\item [\textbf{S2}] C media o alta, D corta o media e I positiva $\rightarrow$ P popular
-		\item [\textbf{S3}] C media, D larga e I positiva $\rightarrow$ P semi-popular
-		\item [\textbf{S4}] C baja o media, D media e I regular $\rightarrow$ P semi-popular
-		\item [\textbf{S5}] I negativa $\rightarrow$ P impopular
+		\item [\textbf{S2}] C media, D corta o media e I positiva $\rightarrow$ P popular
+		\item [\textbf{S3}] C alta, D media e I positiva $\rightarrow$ P popular
+		\item [\textbf{S4}] C media, D larga e I positiva $\rightarrow$ P semi-popular
+		\item [\textbf{S5}] C poca o media, D media e I regular $\rightarrow$ P semi-popular
+		\item [\textbf{S6}] I negativa $\rightarrow$ P impopular
 	\end{itemize}
 \end{itemize}
+
+
+En la herramienta \verb|fispro|, algunas de estas operaciones lógicas no se soportan y entonces se plantean, en su lugar, un conjunto de reglas por cada una de ellas. Así es como quedaron planteadas las reglas de inferencia en esta herramienta:
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics*[scale=0.31]{./Images/rules1.png}
+		\caption{Reglas de la primera etapa}
+\end{figure}
+	
+\begin{figure}[H]
+		\centering
+		\includegraphics*[scale=0.4]{./Images/rules2.png}
+		\caption{Reglas de la segunda etapa}
+\end{figure}
+
 
 \section{Pruebas y ajustes de parámetros}
 
- P1: Determinar la cantidad de perfiles de prueba para un video publicado a las 20:00 sobre la guerra entre Rusia y Ucrania. (R3)
+\subsection{Pruebas}
 
- P2: Según el valor crisp obtenido de la prueba anterior, determinar la popularidad de dicho video, siendo que dura 2.8 minutos (2 minutos 48 segundos) y en general tuvo una interaccion del $68\%$ por parte de los usuarios. (S2)
+Definimos 4 casos de prueba según consideramos relevantes para comprobar el correcto funcionamiento del modelo armado. Estos son:
 
- P3: Determinar la mínima cantidad de perfiles a los que se les va a mostrar un video publicado a las 13:00 sobre [insert topico de relevancia media o alta]. (R1)
+\begin{itemize}
+	\item Ejemplo 1: Se busca determinar la cantidad de perfiles de prueba para un video publicado a las 20:00 sobre la guerra entre Rusia y Ucrania (un topico considerado como muy relevante actualmente, en particular le asignamos una relevancia de 0.9).
+ 	\item Ejemplo 2: Se quiere determinar la cantidad de perfiles de prueba para un video publicado a las 17:18 sobre el último partido de la Selección Argentina de Fútbol (considerado como un tema relevante, en particular le asignamos una relevancia de 0.7).
+	\item Ejemplo 3: Según el valor crisp obtenido en el ejemplo 1, determinar la popularidad de dicho video, siendo que dura 2.8 minutos (2 minutos 48 segundos) y en general tuvo una interaccion del $18\%$ por parte de los usuarios.
+	\item Ejemplo 4: Según el valor crisp obtenido del ejemplo 2, determinar la popularidad de dicho video, que recibió una interaccion del $30\%$ y dura 0.9 minutos (54 segundos). También calcular su popularidad si por el contrario durase 2.5 minutos (2 minutos 30 segundos).
+\end{itemize}
 
- P4: Según el valor crisp obtenido de P3, determinar la popularidad de dicho video, que recibio una interaccion del $30\%$ y dura 0.9 minutos (54 segundos). Si por el contrario durase 4.5 minutos (4 minutos 30 segundos), cual seria su popularidad? (S1 y S3)
+\subsection{Ajustes de parámetros}
 
-
+Para los casos de prueba que requieren inferir la cantidad de perfiles de prueba a los que mostrarle el video (ejemplos 1 y 2), utilizamos de fuzzificador la T-norma producto algebraico y para los casos de prueba que requieren calcular la popularidad que alcanzaría dicho video (ejemplos 3 y 4), utilizamos la T-norma de Lukasiewicz, diferenca acotada. 
+Ambas operaciones son altamente restrictivas y así fueron elegidas para acercarnos lo más posible al determinismo que hay detrás de la mayoría de los algoritmos de este estilo que son usados por las redes sociales. 
+Para defuzzificar utilizamos, en todos los casos, el método mean max.
 
 \section{Resultados}
 
+\subsection*{Ejemplo 1}
+
+Se busca determinar la cantidad de perfiles de prueba para un video publicado a las 20:00 sobre la guerra entre Rusia y Ucrania (un topico considerado como muy relevante actualmente, en particular le asignamos una relevancia de 0.9).
+
+Inferencia del caso de estudio en la herramienta fispro:
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.35]{./Images/p1.png}
+\end{figure}
+
+La regla que se activó en este caso fue \textbf{R3}, como se esperaba. La cantidad de perfiles de prueba que se obtuvieron fue de 5500, valor que pertenece al conjunto borroso \verb|cantidad de perfiles de prueba media| con un grado de pertenencia de 1.
+
+\subsection*{Ejemplo 2}
+
+Se quiere determinar la cantidad de perfiles de prueba para un video publicado a las 17:18 sobre el último partido de la Selección Argentina de Fútbol (considerado como un tema relevante, en particular le asignamos una relevancia de 0.7).
+
+Inferencia del caso de estudio en la herramienta fispro:
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.35]{./Images/p3.png}
+\end{figure}
+
+Las reglas que se activaron en este caso fueron \textbf{R1} y \textbf{R3}, pero la regla \textbf{R1} en mayor medida, como era de esperar. La cantidad de perfiles de prueba que se obtuvo fue de 9600, valor que pertenece al conjunto borroso \\ \verb|cantidad de perfiles de prueba alta| con un grado de pertenencia de 1.
+
+\subsection*{Ejemplo 3}
+
+Según el valor crisp obtenido en el ejemplo 1, determinar la popularidad de dicho video, siendo que dura 2.8 minutos (2 minutos 48 segundos) y en general tuvo una interaccion del $18\%$ por parte de los usuarios.
+
+Inferencia del caso de estudio en la herramienta fispro:
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.32]{./Images/p2.png}
+\end{figure}
+
+Las reglas que se activaron en este caso fueron \textbf{S2} y \textbf{S4}, pero la regla \textbf{S2} en mayor medida, como era de esperar. La popularidad del video predecida fue de 0.75, valor que pertenece al conjunto borroso \verb|popularidad del video popular| con un grado de pertenencia de 1.
+
+\subsection*{Ejemplo 4}
+
+Según el valor crisp obtenido del ejemplo 2, determinar la popularidad de dicho video, que recibió una interaccion del $30\%$ y dura 0.9 minutos (54 segundos). También calcular su popularidad si por el contrario durase 2.5 minutos (2 minutos 30 segundos).
+
+Inferencia del caso de estudio en la herramienta fispro:
+\begin{figure}[H]
+\begin{subfigure}[b]{0.3\textwidth}
+	\centering
+	\includegraphics*[scale=0.32]{./Images/p4-1.png}
+	\caption{Situación 1}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.3\textwidth}
+	\centering
+	\includegraphics*[scale=0.32]{./Images/p4-2.png}
+	\caption{Situación 2}
+\end{subfigure}
+\end{figure}
+
+En la primera situación, las reglas que se activaron fueron \textbf{S1} y \textbf{S3}, pero la regla \textbf{S1} en mayor medida, como se esperaba. La popularidad del video predecida fue de 1, valor que pertenece al conjunto borroso \verb|popularidad del video viral| con un grado de pertenencia de 1.
+
+En la segunda situación, la regla que se activó fue solo \textbf{S3} y en este caso la popularidad del video predecida fue de 0.75, valor que pertenece al conjunto borroso \verb|popularidad del video popular| con un grado de pertenencia de 1.
+
+De estos resultados en particular, se puede deducir claramente que la duración del video tiene una importante incidencia en la determinación de la popularidad de dicho video.
+
+
 \section{Conclusiones}
 
-\section{Bibliografía}
-
-% \begin{itemize}
-%     \item \url{}
-%     \item \url{}
-%     \item \url{}
-%     \item \url{}
-% \end{itemize}
-
-\pagebreak
-\section*{Resultados de la encuesta - reglas del modelo}
-
-Las encuestas realizadas por la cooperativa arrojaron la siguiente información:
-
-\begin{enumerate}
-	\item En relación a la longitud de la nota, la velocidad de escritura y el tiempo de redacción
-		\begin{enumerate}
-			\item Si la longitud de la nota es corta y la velocidad de escritura de quien escribe es rápida entonces el tiempo que toma redactar definitivamente la nota es corto
-			\item Si la longitud de la nota es media y la velocidad de escritura de quien escribe es media entonces el tiempo que toma redactar definitivamente la nota es medio
-			\item Si la longitud de la nota es larga y la velocidad de escritura de quien escribe es lenta entonces el tiempo que toma redactar definitivamente la nota es largo
-		\end{enumerate}
-	\item En relación al tiempo de redacción, la reputación del periodista, la popularidad de la temática y la cantidad de lectores
-		\begin{enumerate}
-			\item Si el tiempo de redacción de una nota es corto, la reputación del periodista es buena y la popularidad de la temática es media o alta entonces la cantidad de lectores es alta
-			\item Si el tiempo de redacción de una nota es medio, la reputación del periodista es buena y la popularidad de la temática es media o alta entonces la cantidad de lectores es medio-alta
-			\item Si el tiempo de redacción de una nota es medio, la reputación del periodista es mala y la popularidad de la temática es alta entonces la cantidad de lectores es medio-baja
-			\item Si el tiempo de redacción de una nota es largo, la reputación del periodista es mala y la popularidad de la temática es alta entonces la cantidad de lectores es medio-baja
-			\item Si el tiempo de redacción de una nota es largo, la reputación del periodista es mala y la popularidad de la temática es baja entonces la cantidad de lectores es baja
-		\end{enumerate}
-\end{enumerate}
-
-\section*{Enunciado}
-
-Sobre la información provista en la anterior sección se solicita:
-
-\begin{enumerate}
-	\item Determinar variables lingüísticas de entrada y salida con sus conjuntos borrosos asociados.
-	\item Analizar si se puede reescribir el modelo en un número de reglas menor admitiendo el uso de más operadores lógicos.
-	\item Determinar el tiempo de redacción para una nota de longitud de 470 palabras y una velocidad de quien la escribe de 40 palabras por minuto. Indicar qué reglas se dispararon con qué grado de veracidad.
-	\item Repetir el apartado anterior para una nota de longitud de 240 palabras y una velocidad de redacción de quien la escribe de 63 palabras por minuto.
-	\item Según el valor crisp obtenido en el apartado 3 y considerando que la reputación de quien escribe la nota es 0 (la mínima) y P 1 (la máxima) estimar la cantidad de lectores de dicha nota. Indicar qué reglas se dispararon con qué grado de veracidad.
-	\item Según el valor crisp obtenido en el apartado 4 y considerando que la reputación de quien escribe la nota es 0.6 y la temática de la que se escribe es economía y finanzas, estimar la cantidad de lectores de dicha nota. Indicar qué reglas se dispararon con qué grado de veracidad.
-\end{enumerate}
-
-\pagebreak
-\section*{Resolución del ejercicio}
-
-\subsection*{Ejercicio 1 - Variables linguísticas}
-El problema se puede dividir en dos etapas. En la primera intervienen las variables lingüísticas de entrada longitud de una nota y velocidad de escritura de quien redacta la nota. Mientras que la variable de salida de la primer etapa es el tiempo que toma redactar la nota.
-
-\vspace{3mm}
-En la segunda etapa las variables de entrada son: el tiempo que toma redactar la nota, la reputación de quien escribe la nota y la popularidad de la temática de la que se escribe la nota. La variable de salida de la segunda etapa es la cantidad de lectores de dicha nota.
-
-\vspace{3mm}
-Los conjuntos borrosos asociados a cada una de las variables se listan a continuación
-
-\begin{itemize}
-	\setlength\itemsep{0.001em} %Menor espacio entre items
-	\item longitud de una nota: corta, media y larga
-	\item velocidad de escritura de quien redacta la nota: lenta, media y rápida
-	\item tiempo que toma redactar la nota: corto, medio y largo
-	\item reputación de quien escribe la nota: mala y buena
-	\item popularidad de la temática de la que se escribe la nota: baja, media o alta
-	\item cantidad de lectores de dicha nota: baja, medio-baja, medio-alta y alta
-\end{itemize}
-
-En las figuras (\ref{fig:etapa1-entrada}), (\ref{fig:etapa1-salida}) (\ref{fig:etapa2-entrada}) y (\ref{fig:etapa2-salida}) se pueden visualizar las varibales de entrada y salida de cada una de las etapas.
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		% \includegraphics[scale=0.4]{L.png}
-		\caption{Longitud de la nota}
-	\end{subfigure}
-	\qquad
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-		% \includegraphics[scale=0.4]{V.png}
-		\caption{Velocidad de escritura}
-	\end{subfigure}
-	\caption{Funciones de pertenencia de los conjuntos borrosos asociados a las variables de entrada de la primera etapa}
-	\label{fig:etapa1-entrada}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics[scale=0.5]{TOut.png}
-	\caption{Tiempo que toma redactar una nota - Variable de salida de la primera etapa}
-	\label{fig:etapa1-salida}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
-		\centering
-		% \includegraphics[scale=0.3]{TIn.png}
-		\caption{Tiempo de redacción}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\textwidth}
-		\centering
-		% \includegraphics[scale=0.3]{R.png}
-		\caption{Reputación del periodista}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\textwidth}
-		\centering
-		% \includegraphics[scale=0.3]{P.png}
-		\caption{Popularidad de la temática}
-	\end{subfigure}
-	\caption{Funciones de pertenencia de los conjuntos borrosos asociados a las variables de entrada de la segunda etapa}
-	\label{fig:etapa2-entrada}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics[scale=0.4]{C.png}
-	\caption{Cantidad de lectores por nota - Variable de salida de la segunda etapa}
-	\label{fig:etapa2-salida}
-\end{figure}
-
-\pagebreak
-\subsection*{Ejercicio 2 - Reglas nuevas basadas en el modelo}
-El listado de reglas escritas de forma más compacta haciendo uso de operadores lógicos se puede ver a continuación
-
-\begin{itemize}
-	\item Reglas relativas a la primera etapa
-	\begin{itemize}
-		\item L corta y V rápida $\rightarrow$ T corto
-		\item L media y V media $\rightarrow$ T medio
-		\item L larga y V lenta $\rightarrow$ T largo
-	\end{itemize}
-	\item Reglas relativas a la segunda etapa
-	\begin{itemize}
-		\item T corto, R buena y P media o alta $\rightarrow$ C alta
-		\item T medio, R buena y P media o alta $\rightarrow$ C medio-alta
-		\item T medio o largo, R mala y P alta $\rightarrow$ C medio-baja
-		\item T largo, R mala y P baja $\rightarrow$ C baja
-	\end{itemize}
-\end{itemize}
-
-Como la herramienta fispro no permite agregar reglas que incluyen el operador de disyunción, reformulamos las reglas para satisfacer estas necesidades.
-
-\begin{itemize}
-	\item Reglas relativas a la primera etapa
-	\begin{itemize}
-		\item [\textbf{R1}] L corta y V rápida $\rightarrow$ T corto
-		\item [\textbf{R2}] L media y V media $\rightarrow$ T medio
-		\item [\textbf{R3}] L larga y V lenta $\rightarrow$ T largo
-	\end{itemize}
-	\item Reglas relativas a la segunda etapa
-	\begin{itemize}
-		\item [\textbf{S1}] T corto, R buena y P media $\rightarrow$ C alta
-		\item [\textbf{S2}] T corto, R buena y P alta $\rightarrow$ C alta
-		\item [\textbf{S3}] T medio, R buena y P media $\rightarrow$ C medio-alta
-		\item [\textbf{S4}] T medio, R buena y P alta $\rightarrow$ C medio-alta
-		\item [\textbf{S5}] T medio, R mala y P alta $\rightarrow$ C medio-baja
-		\item [\textbf{S6}] T largo, R mala y P alta $\rightarrow$ C medio-baja
-		\item [\textbf{S7}]T largo, R mala y P baja $\rightarrow$ C baja
-	\end{itemize}
-\end{itemize}
-
-En la figura (\ref{fig:reglas}) se pueden ver las reglas tal cual las enumeramos previamente.
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.7]{reglasPrimeraEtapa.png}
-	% \includegraphics*[scale=0.7]{reglasSegundaEtapa.png}
-	\caption{Reglas cargadas en la herramienta fispro}
-	\label{fig:reglas}
-\end{figure}
-
-\subsection*{Ejercicio 3 - Inferir el tiempo de redacción}
-Dada una nota de 470 palabras de largo (L media, L larga) y considerando la velocidad de la persona que la redacta de 40 palabras por minuto (V lenta, V media) pudimos inferir con la herramienta fispro que la redacción de dicha nota tomará 4.85 días, es decir, 4 días y 20 horas (T medio, T largo) en completarse.
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.6]{ejercicioTres.png}
-	\caption{Inferencia del caso de estudio en la herramienta fispro}
-\end{figure}
-
-\paragraph{Nota} Para inferir utilizamos de \textit{borrosificador} la Norma mínimo y para defusificar utilizamos el método mean max.
-
-\vspace{3mm}
-Las reglas que se activaron con este caso de estudio son las reglas \textbf{R2} y \textbf{R3} con valores de veracidad de
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c c|c}
-		Regla&Longitud de la nota&Velocidad de redacción&Veracidad según el mínimo\\
-		\hline
-		R2&Media - $\approx$0.5&Media - $\approx$0.7&Medio - 0.5\\
-		R3&Larga - $\approx$0.7&Lenta - 1&Largo - 0.7\\
-	\end{tabular}
-\end{table}
-
-El tiempo de redacción obtenido, 4 días 20 horas, pertenece al conjunto borroso TiempoRedacción Largo con un grado de pertenencia de 1 y al conjunto borroso TiempoRedacción medio con un grado de pertenencia $\approx$0.1. Es decir, el grado de pertenencia a TiempoRedacción largo es mayor al grado de pertenencia TiempoRedacción medio. Este resultado además, se condice con que el grado de veracidad de la regla \textbf{R3} es mayor al grado de veracidad de \textbf{R2}. Teniendo todo esto en cuenta, el valor obtenido como resultado fue el esperado.
-
-\pagebreak
-\subsection*{Ejercicio 4 - Inferir el tiempo de redacción}
-
-Dada una nota de 240 palabras de largo (L corta, L media) y considerando la velocidad de la persona que la redacta de 63 palabras por minuto (V media, V rápida) pudimos inferir con la herramienta fispro que la redacción de dicha nota tomará 1.2 días, es decir, 1 día y 5 horas (T corto, T medio) en completarse.
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.6]{ejercicioCuatro.png}
-	\caption{Inferencia del caso de estudio en la herramienta fispro}
-\end{figure}
-
-\paragraph{Nota} Para inferir utilizamos de \textit{borrosificador} la Norma mínimo y para defusificar utilizamos el método mean max.
-
-\vspace{3mm}
-Las reglas que se activaron con este caso de estudio son las reglas \textbf{R1} y \textbf{R2} con valores de veracidad de
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c c|c}
-		Regla&Longitud de la nota&Velocidad de redacción&Veracidad según el mínimo\\
-		\hline
-		R1&Corta - $\approx$0.6&Rápida - 1&Corto - $\approx$0.6\\
-		R2&Media - $\approx$0.6&Media - $\approx$0.45&Medio - $\approx$0.45\\
-	\end{tabular}
-\end{table}
-
-El tiempo de redacción obtenido, 1 día y 5 horas, pertenece al conjunto borroso TiempoRedacción Corto con un grado de pertenencia de 1 y al conjunto borroso TiempoRedacción Medio con un grado de pertenencia $\approx$0.2. Es decir, el grado de pertenencia a TiempoRedacción medio es mayor al grado de pertenencia TiempoRedacción corto. Este resultado además, se condice con que el grado de veracidad de la regla \textbf{R1} es mayor al grado de veracidad de \textbf{R2}. Teniendo todo esto en cuenta, el valor obtenido como resultado fue el esperado.
-
-\pagebreak
-\subsection*{Ejercicio 5 - Inferir la cantidad de lectores}
-Dado el tiempo de redacción de 4 días y 20 horas (4.85 días; T medio, T largo), 0 de reputación de quien escribe la nota (R mala) y considerando 1 de popularidad de la temática (P alta), pudimos inferir con la herramienta fispro que la cantidad de lectores de dicha nota será de 300 personas (C media-baja)
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.5]{ejercicioCinco.png}
-	\caption{Inferencia del caso de estudio en la herramienta fispro}
-\end{figure}
-
-\paragraph{Nota} Para inferir utilizamos de \textit{borrosificador} la Norma Lukasciewicz
-y para defusificar utilizamos el método mean max.
-
-\vspace{3mm}
-Las reglas que se activaron con este caso de estudio son las reglas \textbf{S5} y \textbf{S6} con valores de veracidad de
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c c c|c}
-		Regla&Tiempo de redacción&Reputación de le periodista&Popularidad de la temática&Veracidad según Lukasciewicz\\
-		\hline
-		S5&Medio - $\approx$0.1&Mala - 1&Alta - 1&Medio-baja - $\approx$0.1\footnotemark\\
-		S6&Largo - 1&Mala - 1&Alta - 1&Medio-baja - 1\footnotemark\\
-	\end{tabular}
-\end{table}
-
-\footnotetext[1]{max\{0, max\{0, 0.1 + 1 - 1\} + 1 - 1\}}
-\footnotetext{max\{0, max\{0, 1 + 1 - 1\} + 1 - 1\}}
-
-La cantidad de lectores obtenida, 300 lectores, pertenece al conjunto borroso CantidadLectores Medio-baja con un grado de pertenencia de 1. Este resultado además, se condice con que el grado de veracidad de la regla \textbf{R5} y \textbf{R6} de 1. Teniendo todo esto en cuenta, el valor obtenido como resultado fue el esperado.
-
-\pagebreak
-\subsection*{Ejercicio 6 - Inferir la cantidad de lectores}
-
-Dado el tiempo de redacción de 1 día 17 horas (1.7 días; T corto, T medio), 0.6 de reputación de quien escribe la nota (R mala, R buena) y considerando 0.85 de popularidad de la temática (P media, P alta), pudimos inferir con la herramienta fispro que la cantidad de lectores de dicha nota será de 913 personas (C media-alta, C alta)
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.55]{ejercicioSeis.png}
-	\caption{Inferencia del caso de estudio en la herramienta fispro}
-\end{figure}
-
-\paragraph{Nota} Para inferir utilizamos de \textit{borrosificador} la Norma Lukasciewicz
-y para defusificar utilizamos el método mean max.
-
-\vspace{3mm}
-Las reglas que se activaron con este caso de estudio son las reglas \textbf{S1}, \textbf{S2} y \textbf{S4} con valores de veracidad de
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c c c|c}
-		Regla&Tiempo de redacción&Reputación de le periodista&Popularidad de la temática&Veracidad según Lukasciewicz\\
-		\hline
-		S1&Corto - 1&Buena - $\approx$0.8&Media - $\approx$0.25&Alta - $\approx$0.05\footnotemark\\
-		S2&Corto - 1&Buena - $\approx$0.8&Alta - 1&Alta - $\approx$0.55\footnotemark\\
-		S4&Medio - $\approx$0.5&Buena - $\approx$0.8&Alta - $\approx$0.75&Medio-alta - $\approx$0\footnotemark\\
-	\end{tabular}
-\end{table}
-
-\footnotetext[1]{max\{0, max\{0, 1 + 0.8 - 1\} + 0.25 - 1\}}
-\footnotetext[2]{max\{0, max\{0, 1 + 0.8 - 1\} + 0.75 - 1\}}
-\footnotetext[3]{max\{0, max\{0, 0.5 + 0.8 - 1\} + 0.25 - 1\}}
-
-La cantidad de lectores obtenida, 913 personas, pertenece al conjunto borroso CantidadLectores Medio-alto con un grado de pertenencia de $\approx$0.3 y al conjunto borroso CantidadLectores Alto con un grado de pertenencia de 1. Es decir, el grado de pertenencia a CantidadLectores Alto es mayor al grado de pertenencia CantidadLectores Medio. Este resultado además, se condice con que el grado de veracidad de la regla \textbf{S2} es mayor al grado de veracidad de \textbf{S1} y \textbf{S4}. Teniendo todo esto en cuenta, el valor obtenido como resultado fue el esperado.
-
-\pagebreak
-\subsection*{Ejercicio 7 - Inferir la cantidad de lectores}
-
-Dado el tiempo de redacción de 4 dias (T medio, T largo), 0.6 de reputación de quien escribe la nota (R mala, R buena) y considerando 0.5 de popularidad de la temática (P media), pudimos inferir con la herramienta fispro que la cantidad de lectores de dicha nota será de 687 personas (C media-alta, C alta).
-
-\begin{figure}[H]
-	\centering
-	% \includegraphics*[scale=0.6]{ejercicioSiete.png}
-	\caption{Inferencia del caso de estudio en la herramienta fispro}
-\end{figure}
-
-\paragraph{Nota} Para inferir utilizamos de \textit{borrosificador} la Norma Lukasciewicz
-y para defusificar utilizamos el método mean max.
-
-\vspace{3mm}
-La regla que se activó con este caso de estudio es \textbf{S3} con valor de veracidad de
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c c c|c}
-		Regla&Tiempo de redacción&Reputación de le periodista&Popularidad de la temática&Veracidad según Lukasciewicz\\
-		\hline
-		S3&Medio - $\approx$0.75&Buena - $\approx$0.75&Media - 1&Medio-alta - $\approx$0.5\footnotemark\\
-	\end{tabular}
-\end{table}
-
-\footnotetext[6]{max\{0, max\{0, 0.75 + 0.75 - 1\} + 1 - 1\}}
-
-La cantidad de lectores obtenida, 687 lectores, pertenece al conjunto borroso CantidadLectores Medio-alta con un grado de pertenencia de 1, lo cual se condice con un alto grado de veracidad de la regla \textbf{S3} (considerando lo ajustado de la norma de Lukasciewicz).
-
-\pagebreak
-\section*{Conclusiones}
-
-El modelo resultó completo y práctico en términos de los resultados que pudimos obtener a partir de él. Apartado por apartado los resultados fueron verificando nuestra intuición. Además, éstos se correspondieron con las medidas (borrosas) que utilizamos para ganar confianza sobre nuestro modelo.
-
-Para los apartados 3 y 4 que pedían inferir el tiempo de redacción de una nota, usamos la norma mínimo dado que es la operación menos restrictiva. Creemos que elegir una operación que no subestime el tiempo de una nota se alinea con los ideales que podría tener una cooperativa: genera un entorno de trabajo amigable en el que les trabajadores no se sienten presionadxs a cumplir plazos muy cortos de redacción.
-
-Para los apartados, 5, 6 y 7, en contraste, decidimos operar con la norma de Lukasiewicz, norma más restrictiva que el mínimo, para no sobreestimar la cantidad de lectores que comprará el ejemplar con la nota. Pensamos que tiene sentido que una cooperativa no pueda imprimir más de lo que le permite un presupuesto acotado, por lo que ajustar la estimación de cantidad de lectores va a actuar en su favor.
-
-Como único comentario extra, en la teoría la norma de Lukasiewicz estaba solamente para dos variables de entrada mientras que en nuestro trabajo, tuvimos que aplicar reglas con 3 variables de entrada. Lo que decidimos en este caso es extender la norma para 3 variables de entrada de la siguiente manera:
-
-$$L(L(V1,V2),V3)$$ donde $L$ es la norma de Lukasiewicz.
-
-Los resultados que obtuvimos a partir de la extensión de esta regla van de la mano con los valores que esperabamos.
+La motivación para plantear este problema fue la de pensar y modelar los factores influyentes a la hora
+de determinar el grado de viralidad de un video. Esto devino principalmente de la lectura de distintos estudios relacionados, destacándose el caso de \href{https://arxiv.org/abs/2012.07716}{\#TulsaFlop: A Case Study of Algorithmically-Influenced Collective Action on TikTok},
+que analiza estadísticamente distintos vídeos de activismo social y su performance en TikTok.
+Creemos que el modelo resulto propicio y nos permitió verificar nuestras intuiciones, mostrándonos como algunos pequeños cambios pueden afectar sustancialmente el desempeño de un vídeo
+y otros pueden no hacerlo en igual medida.
 
 
 \end{document}

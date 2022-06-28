@@ -1,4 +1,3 @@
-from cgi import test
 from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
@@ -16,6 +15,12 @@ data_train, data_test, target_train, target_test = train_test_split(dataset.data
                                                                     dataset.target,
                                                                     test_size = 0.2)
 
+# EJERCICIO 1
+# Para graficar muestra de la imagenes:
+# plt.matshow(dataset.images[894])
+# plt.show()
+
+
 def default_trainig():
     '''
     Los valores por defecto de los parámetros de DecisionTreeClassifier son:
@@ -26,8 +31,8 @@ def default_trainig():
     min_samples_leaf: 1
     min_weight_fraction_leaf: 0.0
     max_features: None
-    random_stateint: None
-    max_leaf_nodesint: None
+    random_state: None
+    max_leaf_nodes: None
     min_impurity_decrease: 0.0
     class_weightdict: None
     ccp_alpha: 0.0
@@ -72,9 +77,9 @@ def ejercicio2a():
     for i in range(len(dataset.target_names)):
         target_names += str(dataset.target_names[i])
     graph = graph_tree(tree_model, dataset.feature_names, target_names)
-    graph
+    return graph
 
-# ejercicio2a()
+ejercicio2a()
 
 
 # EJERCICIO 2 b

@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc} %codificacion de caracteres que permite tildes
+% \usepackage[spanish]{babel}
+
+% \usepackage{amsfonts}
+% \usepackage{natbib}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{mathrsfs} % Cursive font
+% \usepackage{ragged2e}
+\usepackage{fancyhdr}
+% \usepackage{nameref}
+% \usepackage{wrapfig}
+\usepackage{hyperref}
+
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subcaption}
+% \graphicspath{ {./Resources/} }
+
+% \usepackage[
+% top    = 2cm,
+% bottom = 1.5cm,
+% left   = 1.5cm,
+% right  = 1.5cm]
+% {geometry}
+
+
+
+
+\usepackage{mathtools}
+\usepackage{xparse} \DeclarePairedDelimiterX{\Iintv}[1]{\llbracket}{\rrbracket}{\iintvargs{#1}}
+\NewDocumentCommand{\iintvargs}{>{\SplitArgument{1}{,}}m}
+{\iintvargsaux#1}
+\NewDocumentCommand{\iintvargsaux}{mm} {#1\mkern1.5mu,\mkern1.5mu#2}
+
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+
+
+\addtolength{\textwidth}{0.2cm}
+\setlength{\parskip}{8pt}
+\setlength{\parindent}{0.5cm}
+\linespread{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{TP Aprendizaje Automatizado - Cipullo, Sullivan}
+% \lhead{Introducción a la Inteligencia Artificial}
+\lhead{IIA}
+\rfoot{\vspace{1cm} \thepage}
+
+\renewcommand*\contentsname{\LARGE Índice}
+
+\setlength{\skip\footins}{0.5cm}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \hspace{-2.5cm}\includegraphics[scale= 0.48]{header.png}
+    \begin{center}
+        \vfill
+            \noindent\textbf{\Huge Introducción a la Inteligencia Artificial}\par
+            \vspace{.5cm}
+            \noindent\textbf{\Huge Trabajo Práctico Aprendiza Automatizado}\par
+            \vspace{.5cm}
+        \vfill
+        \noindent \textbf{\huge Alumnas:}\par
+        \vspace{.5cm}
+        \noindent \textbf{\Large Cipullo, Inés}\par
+        \noindent \textbf{\Large Sullivan, Katherine}\par
+ 
+        \vfill
+        % \large Universidad Nacional de Rosario \par
+        \noindent\large 2022
+    \end{center}
+\end{titlepage}
+\ 
+
+
+
+\section*{Ejercicio 1 }
+
+El conjunto de datos a utilizar es de imágenes de los dígitos del 0 al 9. Cada dato es una imagen de 8x8 y se representa mediante una lista de 64 píxeles.
+El objetivo es realizar un aprendizaje supervisado sobre dicho conjunto, buscando clasificar cada dato en la clase del respectivo dígito que muestra.
+
+El conjunto de datos contiene 1797 muestras en total y habiendo 10 clases, se cuenta con aproximadamente 180 muestras por clase.
+Las siguientes son muestras etiquetadas de los datos del conjunto.
+
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics*[scale=0.2]{muestra4.png}
+		\caption{Etiqueta: 4}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics*[scale=0.2]{muestra9.png}
+		\caption{Etiqueta: 9}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics*[scale=0.2]{muestra7.png}
+		\caption{Etiqueta: 7}
+	\end{subfigure}
+\end{figure}
+
+\section*{Ejercicio 2}
+
+\subsection*{a.}
+
+Al entrenar un árbol de decisión con los parámetros por defecto se obtiene en todos los casos un valor de accuracy sobre los datos de entrenamiento igual a 1, y el valor de accuracy sobre los datos de evaluación ronda el 0.86, en ningún caso de los testeados superando el 0.9.
+
+Si bien uno podría pensar que un accuracy de 0.86 es más que aceptable, la diferencia notable con respecto a la accuracy sobre el conjunto de entrenamiento y más teniendo en cuenta que esta es perfecta, es un claro indicador de sobreentrenamiento.
+
+Con el objetivo de buscar clasificar cada dato de entrenamiento sin equivocaciones, un modelo puede terminar siendo más complejo de lo que la generalización debe ser. Esto es lo que se puede observar al graficar el árbol obtenido, que resulta de grandes dimensiones, con muchas de sus hojas clasificando solo un elemento del conjunto de datos.
+
+Este comportamiento se da porque los parámetros de parada por defecto presentan restricciones laxas o nulas. Podemos visualizar esto con, por ejemplo, el parámetro \verb|max_depth| que establece un cota a la cantidad de niveles del árbol (profundidad) cuyo valor por defecto es \verb|None|, o el parámetro \verb|min_samples_leaf| que es una restricción sobre la cantidad mínima de elementos que debe clasificar una hoja del árbol y su valor por defecto es \verb|1|.
+
+\end{document}

@@ -130,6 +130,7 @@ def ejercicio2b():
                     if ((test_accuracy >= 0.8) and (train_accuracy - test_accuracy <= 0.05)):
                         best_cases.append((train_accuracy, test_accuracy, max_depth, min_samples_split, min_samples_leaf, max_leaf_nodes))
 
+    print("Mejor y peor accuracy obtenida:")
     print(f"max_test_accuracy: {max_test_accuracy}, max_train_accuracy: {max_train_accuracy}, min_test_accuracy: {min_test_accuracy}, min_train_accuracy: {min_train_accuracy}\n")
 
 
@@ -138,9 +139,10 @@ def ejercicio2b():
     for tuple in best_cases:
         print(f"train_accuracy: {tuple[0]}, test_accuracy: {tuple[1]}")
         print(f"max_depth: {tuple[2]}, min_samples_split: {tuple[3]}, min_samples_leaf: {tuple[4]}, max_leaf_nodes: {tuple[5]}")
+    print(f"Cantidad de buenos modelos: {len(best_cases)}")
 
     return 0
 
-# ejercicio2b()
+ejercicio2b()
 
 

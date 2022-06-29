@@ -21,7 +21,7 @@ data_test = scaler.transform(data_test)
 
 
 # Si no se pasa el parámetro, es el entrenamiento por defecto.
-# Si se define el learning rate es el entrenamiento por defecto pero modificando el valor de leraning_rate_init.
+# Si se define el learning rate (parámetro) es el entrenamiento por defecto pero modificando el valor de leraning_rate_init.
 def default_training(learning_rate_init=0.001):
     '''
     Parámetros por defecto de la función MLPClassifier (que crea el modelo)
@@ -66,9 +66,20 @@ def default_training(learning_rate_init=0.001):
     print(f"Valor de accuracy sobre el conjunto de entrenamiento: {train_accuracy}.")
     
     return mlp_model, test_accuracy, train_accuracy
-    
-# default_training()
 
+
+# EJERCICIO 1
+# Se entrena una red neuronal con los hiperparámetros por defecto.
+
+mlp_model, test_accuracy, train_accuracy = default_training()
+plt.plot(mlp_model.loss_curve_)
+plt.xlabel("Iteraciones")
+plt.ylabel("Error")
+plt.title("Error en el entrenamiento")
+plt.show()
+
+
+# EJERCICIO 2
 def accuracy_plotting():
     learning_rate_values = [0.00001, 0.0001, 0.001, 0.01, 0.1, 1, 10, 100]
     test_accuracy_values = []
